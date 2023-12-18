@@ -60,7 +60,7 @@
 //               |     |      |  GUI  | SHIFT |        |  |       |  space  |  0    |  ,    |  .   |
             bindings = <
 &kp TILDE    &kp F1    &kp F2    &kp F3      &kp F4    &kp F5                    &kp KP_PLUS    &kp F7   &kp F8          &kp F9    &kp F10   &kp F11
-&kp PIPE &kp EXCL  &kp AT    &kp HASH    &kp DLLR  &kp LGUI(LSHIFT(S))                    &kp KP_MINUS    &kp N7   &kp N8          &kp N9    &kp N0    &kp F12
+&kp PIPE &kp EXCL  &kp AT    &kp HASH    &kp DLLR  &kp PRCNT                    &kp KP_MINUS    &kp N7   &kp N8          &kp N9    &kp N0    &kp F12
 &trans     &kp CARET &kp AMPS &kp KP_MULTIPLY &kp LBRC  &kp RBRC                 &kp KP_MULTIPLY &kp N4 &kp N5 &kp N6  &kp RPAR  &kp PIPE
 &trans    &kp EQUAL &kp LBKT &kp RBKT &kp LC(PG_DN)  &kp LC(PG_UP)   &kp KP_DIVIDE         &kp N1  &kp N2 &kp N3        &kp COLON &kp BSLH  &trans
                     &trans    &trans      &kp LGUI    &kp LSHIFT     &trans &trans  &kp SPACE    &kp N0   &kp KP_COMMA          &kp KP_DOT
