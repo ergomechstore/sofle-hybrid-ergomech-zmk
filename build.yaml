@@ -17,4 +17,4 @@ include:
     shield: sofle_left
   - board: nice_nano_v2
     shield: sofle_right
-    shield: settings_reset
+    #shield: settings_reset
