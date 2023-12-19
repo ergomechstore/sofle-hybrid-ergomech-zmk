@@ -83,7 +83,7 @@
 &trans    &trans    &trans   &trans    &trans  &trans                                        &kp HOME &kp END    &kp UP   &trans    &kp N0  &trans
 &trans     &kp INS      &kp PSCRN    &kp K_CMENU  &trans       &trans                        &kp PG_UP &trans    &kp UP   &trans    &kp N0  &trans
 &trans     &kp LALT     &kp LCTRL    &kp LSHFT    &trans       &kp CLCK                      &kp PG_DN &kp LEFT  &kp DOWN &kp RIGHT &kp DEL &kp BSPC
-&trans     &kp K_UNDO   &kp K_CUT    &kp K_COPY   &kp K_PASTE  &trans                 &none  &kp LC(PG_DN)    &kp LC(PG_UP)    &trans   &trans    &kp C_BRI_DN  &kp C_BRI_UP
+&trans     &kp K_UNDO   &kp K_CUT    &kp K_COPY   &kp K_PASTE  &trans                 &none  &kp LC(PG_UP)    &kp LC(PG_DN)    &trans   &trans    &kp C_BRI_DN  &kp C_BRI_UP
                         &trans       &trans       &trans       &trans        &trans  &kp F5  &trans    &tog RAISE    &kp K_VOL_DN  &kp K_VOL_UP
                                                                                      &kp A      &kp B  &kp C &kp D  &kp E
             >;
