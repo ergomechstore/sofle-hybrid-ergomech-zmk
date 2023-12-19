@@ -77,8 +77,8 @@
 // | BTCLR | BT1  | BT2  |  BT3  |  BT4  |  BT5 |                | HOME | END  |       |      |       |       |
 // |       | INS  | PSCR | GUI   |       |      |                | PGUP |      |   ^   |      |       |       |
 // |       | ALT  | CTRL | SHIFT |       | CAPS |                | PGDN |   <- |   v   |  ->  |  DEL  | BKSPC |
-// |       | UNDO | CUT  | COPY  | PASTE |      |      |  |      | tab- | tab+ |       |      | bright+|bright- |
-//                |      |       |       |      |      |  |  F5  | TOGRAISE |      |vol+   |vol-  |
+// |       | UNDO | CUT  | COPY  | PASTE |      |      |  |      | tab- | tab+ |       |      | bright-|bright+ |
+//                |      |       |       |      |      |  |  F5  | TOGRAISE |      |vol-   |vol+  |
             bindings = <
 &trans    &trans    &trans   &trans    &trans  &trans                                        &kp HOME &kp END    &kp UP   &trans    &kp N0  &trans
 &trans     &kp INS      &kp PSCRN    &kp K_CMENU  &trans       &trans                        &kp PG_UP &trans    &kp UP   &trans    &kp N0  &trans
@@ -88,7 +88,7 @@
                                                                                      &kp A      &kp B  &kp C &kp D  &kp E
             >;
 
-            sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&inc_dec_kp PG_DN PG_UP &inc_dec_kp PG_UP PG_DN>;
         };
 
         adjust_layer {
