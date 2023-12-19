@@ -43,7 +43,7 @@
 &kp TAB   &kp Q  &kp W    &kp E    &kp R     &kp T                            &kp Y  &kp U     &kp I     &kp O    &kp P    &kp DEL
 &kp CAPS   &kp A  &kp S    &kp D    &kp F     &kp G                            &kp H  &kp J     &kp K     &kp L    &kp FSLH &kp SQT
 &kp LCTRL &kp Z  &kp X    &kp C    &kp V     &kp B      &kp F5            &kp N  &kp M     &kp COMMA &kp DOT  &kp SEMI &kp LC(LA(T))
-                 &kp LCTRL &kp LALT &kp LGUI &kp LSHIFT  &mo LOWER    &kp LCTRL  &kp SPACE  &mo RAISE &kp K_VOL_DN  &kp K_VOL_UP
+                 &kp LCTRL &kp LALT &kp LGUI &kp LSHIFT  &mo LOWER    &kp LCTRL  &kp SPACE  &tog RAISE &kp K_VOL_DN  &kp K_VOL_UP
                                                                    &kp A      &mkp MB2  &kp UP &mkp MB3  &mkp MB1
             >;
 
