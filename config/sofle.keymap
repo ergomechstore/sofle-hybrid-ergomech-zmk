@@ -33,17 +33,17 @@
         default_layer {
             label = "Qwerty";
 // -----------------------------------------------------------------------------------------------------------
-// |  ESC  |  macro | home |  RET |  end | SCREEN |                 |  -   |  7    | BKSPC |  (   |   )   |   =   |
+// |  ESC  |  RAISE | home |  RET |  end | SCREEN |                 |  -   |  7    | BKSPC |  (   |   )   |   =   |
 // |  TAB  |  Q  |  W  |  E   |  R   |  T   |                       |  Y   |  U    |  I    |  O   |   P   | DEL   |
 // |  CAPS |  A  |  S  |  D   |  F   |  G   |                       |  H   |  J    |  K    |  L   |   /   |   '   |
-// | SHIFT |  Z  |  X  |  C   |  V   |  B   |  MUTE  |  |           |  N   |  M    |  ,    |  .   |   ;   | TERMINAL |
-//               | LCONTROL | ALT  | LGUI | SHIFT|  LOWER |  | LCTRL | SPACE| macro  | vol down   | vol up  |
+// | SHIFT |  Z  |  X  |  C   |  V   |  B   |  F5  |  |           |  N   |  M    |  ,    |  .   |   ;   | TERMINAL |
+//               | LCONTROL | ALT  | LGUI | SHIFT|  LOWER |  | LCTRL | SPACE| RAISE  | vol down   | vol up  |
             bindings = <
-&kp ESC &kp N1 &kp HOME   &kp RET   &kp END    &kp LG(LS(S))                           &kp MINUS &kp N7    &kp BSPC    &kp LPAR   &kp RPAR   &kp EQUAL
+&kp ESC &mo RAISE &kp HOME   &kp RET   &kp END    &kp LG(LS(S))                           &kp MINUS &kp N7    &kp BSPC    &kp LPAR   &kp RPAR   &kp EQUAL
 &kp TAB   &kp Q  &kp W    &kp E    &kp R     &kp T                            &kp Y  &kp U     &kp I     &kp O    &kp P    &kp DEL
 &kp CAPS   &kp A  &kp S    &kp D    &kp F     &kp G                            &kp H  &kp J     &kp K     &kp L    &kp FSLH &kp SQT
-&kp LCTRL &kp Z  &kp X    &kp C    &kp V     &kp B      &kp C_MUTE            &kp N  &kp M     &kp COMMA &kp DOT  &kp SEMI &none
-                 &kp LCTRL &kp LALT &kp LGUI &kp LSHIFT  &mo LOWER    &kp LCTRL  &kp SPACE  &kp RCTRL &kp K_VOL_DN  &kp K_VOL_UP
+&kp LCTRL &kp Z  &kp X    &kp C    &kp V     &kp B      &kp F5            &kp N  &kp M     &kp COMMA &kp DOT  &kp SEMI &kp LC(LA(T))
+                 &kp LCTRL &kp LALT &kp LGUI &kp LSHIFT  &mo LOWER    &kp LCTRL  &kp SPACE  &tog RAISE &kp K_VOL_DN  &kp K_VOL_UP
                                                                    &kp A      &mkp MB2  &kp UP &mkp MB3  &mkp MB1
             >;
 
@@ -72,35 +72,35 @@
         };
 
         raise_layer {
-            label = "raise";
+            label = "Mouse";
 // ------------------------------------------------------------------------------------------------------------
-// | BTCLR | BT1  | BT2  |  BT3  |  BT4  |  BT5 |                |      |      |       |      |       |       |
+// | BTCLR | BT1  | BT2  |  BT3  |  BT4  |  BT5 |                | HOME | END  |       |      |       |       |
 // |       | INS  | PSCR | GUI   |       |      |                | PGUP |      |   ^   |      |       |       |
 // |       | ALT  | CTRL | SHIFT |       | CAPS |                | PGDN |   <- |   v   |  ->  |  DEL  | BKSPC |
-// |       | UNDO | CUT  | COPY  | PASTE |      |      |  |      |      |      |       |      |       |       |
-//                |      |       |       |      |      |  |      |      |      |       |      |
+// |       | UNDO | CUT  | COPY  | PASTE |      |      |  |      | tab- | tab+ |       |      | bright+|bright- |
+//                |      |       |       |      |      |  |  F5  | TOGRAISE |      |vol+   |vol-  |
             bindings = <
-&bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4                  &trans    &trans    &trans   &trans    &trans  &trans
+&trans    &trans    &trans   &trans    &trans  &trans                                        &kp HOME &kp END    &kp UP   &trans    &kp N0  &trans
 &trans     &kp INS      &kp PSCRN    &kp K_CMENU  &trans       &trans                        &kp PG_UP &trans    &kp UP   &trans    &kp N0  &trans
 &trans     &kp LALT     &kp LCTRL    &kp LSHFT    &trans       &kp CLCK                      &kp PG_DN &kp LEFT  &kp DOWN &kp RIGHT &kp DEL &kp BSPC
-&trans     &kp K_UNDO   &kp K_CUT    &kp K_COPY   &kp K_PASTE  &trans        &trans          &trans    &trans    &trans   &trans    &trans  &trans
-                        &trans       &trans       &trans       &trans        &trans  &trans  &trans    &trans    &trans   &trans
+&trans     &kp K_UNDO   &kp K_CUT    &kp K_COPY   &kp K_PASTE  &trans        &trans          LC(PG_DN)    &kp LC(PG_UP)    &trans   &trans    &kp C_BRI_DN  &kp C_BRI_UP
+                        &trans       &trans       &trans       &trans        &trans  &kp F5  &trans    &tog RAISE    &kp K_VOL_DN  &kp K_VOL_UP
                                                                                      &kp A      &kp B  &kp C &kp D  &kp E
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp PG_UP PG_DN>;
         };
 
         adjust_layer {
 // ----------------------------------------------------------------------------------------------------------------------------
-// | BTCLR  |  BT1    |  BT2    |   BT3   |   BT4   |   BT5   |                  |      |      |       |      |       |       |
+// | BTCLR  |  BT1    |  BT2    |   BT3   |   BT4   |   BT5   |                  | BTCLR  |  BT1    |  BT2    |   BT3   |   BT4   |   BT5   |
 // | EXTPWR | RGB_HUD | RGB_HUI | RGB_SAD | RGB_SAI | RGB_EFF |                  |      |      |       |      |       |       |
 // |        | RGB_BRD | RGB_BRI |         |         |         |                  |      |      |       |      |       |       |
 // |        |         |         |         |         |         | RGB_TOG | |      |      |      |       |      |       |       |
 //                    |         |         |         |         |         | |      |      |      |       |      |
-            label = "adjust";
+            label = "Settings";
             bindings = <
-&bt BT_CLR        &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4                            &none &none &none &none &none &none
+&bt BT_CLR        &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4                            &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4
 &ext_power EP_TOG &rgb_ug RGB_HUD &rgb_ug RGB_HUI &rgb_ug RGB_SAD &rgb_ug RGB_SAI &rgb_ug RGB_EFF                         &none &none &none &none &none &none
 &none             &rgb_ug RGB_BRD &rgb_ug RGB_BRI &none           &none           &none                                   &none &none &none &none &none &none
 &none             &none           &none           &none           &none           &none            &rgb_ug RGB_TOG        &none &none &none &none &none &none
