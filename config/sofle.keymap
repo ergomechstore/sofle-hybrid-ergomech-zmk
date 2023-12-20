@@ -61,11 +61,11 @@
 // |       |  =  |  [  |  ]   | pg dn | pg up |        |  |       |  /   |  1    |  2    |  3   |   \   |       |
 //               | UP | DOWN  |  GUI  | SHIFT |        |  |       |  space  |  0    |  ,    |  .   |
             bindings = <
-&kp TILDE    &kp F1    &kp F2    &kp F3      &kp F4    &kp F5                    &kp KP_PLUS     &kp F7   &kp F8  &kp F9  &kp F10   &kp F11
-&kp PIPE &kp EXCL  &kp AT    &kp HASH    &kp DLLR  &kp PRCNT                     &kp KP_MINUS    &kp N7   &kp N8  &kp N9  &kp N0    &kp F12
-&trans     &kp CARET &kp AMPS &kp KP_MULTIPLY &kp LBRC  &kp RBRC                 &kp KP_MULTIPLY &kp N4   &kp N5  &kp N6  &kp RPAR  &kp PIPE
-&trans    &kp EQUAL &kp LBKT &kp RBKT &kp LC(PG_UP)  &kp LC(PG_DN) &none         &kp KP_DIVIDE   &kp N1   &kp N2  &kp N3  &kp COLON &kp BSLH
-&kp UP    &kp DOWN      &kp LGUI    &kp LSHIFT     &trans                  &kp LCTRL  &kp SPACE       &kp N0   &kp KP_COMMA    &kp KP_DOT
+&kp TILDE  &kp F1    &kp F2    &kp F3      &kp F4    &kp F5                    &kp KP_PLUS     &kp F7   &kp F8  &kp F9  &kp F10   &kp F11
+&kp PIPE   &kp EXCL  &kp AT    &kp HASH    &kp DLLR  &kp PRCNT                     &kp KP_MINUS    &kp N7   &kp N8  &kp N9  &kp N0    &kp F12
+&trans     &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LBRC  &kp RBRC                 &kp KP_MULTIPLY &kp N4   &kp N5  &kp N6  &kp RPAR  &kp PIPE
+&trans     &kp EQUAL &kp LBKT  &kp RBKT &kp LC(PG_UP)  &kp LC(PG_DN) &none         &kp KP_DIVIDE   &kp N1   &kp N2  &kp N3  &kp COLON &kp BSLH
+&kp UP     &kp DOWN      &kp LGUI    &kp LSHIFT     &trans                  &kp LCTRL  &kp SPACE       &kp N0   &kp KP_COMMA    &kp KP_DOT
                                                                          &kp A   &kp RIGHT  &kp UP &kp LEFT  &kp DOWN
             >;
 
@@ -83,7 +83,7 @@
             bindings = <
 &trans     &trans       &trans       &kp RET   &trans  &out OUT_TOG                         &kp HOME &kp END    &kp UP   &trans    &kp N0  &trans
 &trans     &kp INS      &kp UP       &kp UP    &trans     &trans                            &kp PG_UP &trans    &kp UP   &trans    &kp N0  &trans
-&trans     &kp LEFT     &kp LEFT     &kp DOWN  &RIGHT       &kp CLCK                        &kp PG_DN &kp LEFT  &kp DOWN &kp RIGHT &kp DEL &kp BSPC
+&trans     &kp LEFT     &kp LEFT     &kp DOWN  &kp RIGHT       &kp CLCK                        &kp PG_DN &kp LEFT  &kp DOWN &kp RIGHT &kp DEL &kp BSPC
 &trans     &kp K_UNDO   &kp K_CUT    &kp K_COPY   &kp K_PASTE  &trans &none                 &kp LC(PG_UP)    &kp LC(PG_DN)    &trans   &trans    &kp C_BRI_DN  &kp C_BRI_UP
                         &trans       &trans       &trans       &trans        &trans  &kp F5  &trans    &tog RAISE    &kp K_VOL_DN  &kp K_VOL_UP
                                                                                      &kp A      &kp B  &kp C &kp D  &kp E
