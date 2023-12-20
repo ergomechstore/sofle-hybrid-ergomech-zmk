@@ -32,7 +32,7 @@
         compatible = "zmk,keymap";
 
         default_layer {
-            label = "Alpha";
+            label = "Input";
 // -----------------------------------------------------------------------------------------------------------
 // |  ESC  |  RAISE | home |  RET |  end | SCREEN |                 |  -   |  7    | BKSPC |  (   |   )   |   =   |
 // |  TAB  |  Q  |  W  |  E   |  R   |  T   |                       |  Y   |  U    |  I    |  O   |   P   | DEL   |
@@ -52,7 +52,7 @@
         };
 
         lower_layer {
-            label = "Number-Symbol";
+            label = "Number-S";
 // TODO: Some binds are waiting for shifted keycode support.
 // ------------------------------------------------------------------------------------------------------------
 // |    ~  |  F1 |  F2 |  F3  |  F4  |  F5  |                     |  +  |  F7   |  F8   |  F9  |  F10  |  F11  |
@@ -73,18 +73,18 @@
         };
 
         raise_layer {
-            label = "Mouse";
+            label = "Navs";
 // ------------------------------------------------------------------------------------------------------------
-// |       |      |      |       |       |BT TOG|                | HOME | END  |       |      |       |       |
-// |       | INS  | UP   | GUI   |       |      |                | PGUP |      |   ^   |      |       |       |
-// |       | LEFT | DOWN | RIGHT |       | CAPS |                | PGDN |   <- |   v   |  ->  |  DEL  | BKSPC |
+// |       |      |      |  RET  |       |BT TOG|                | HOME | END  |       |      |       |       |
+// |       | INS  | UP   | UP    |       |      |                | PGUP |      |   ^   |      |       |       |
+// |       | LEFT | LEFT | DOWN  | RIGHT | CAPS |                | PGDN |   <- |   v   |  ->  |  DEL  | BKSPC |
 // |       | UNDO | CUT  | COPY  | PASTE |      |      |  |      | tab- | tab+ |       |      | bright-|bright+ |
 //                |      |       |       |      |      |  |  F5  | TOGRAISE |      |vol-   |vol+  |
             bindings = <
-&trans     &trans    &trans   &trans    &trans  &out OUT_TOG                                        &kp HOME &kp END    &kp UP   &trans    &kp N0  &trans
-&trans     &kp INS      &kp UP       &kp K_CMENU  &trans     &trans                        &kp PG_UP &trans    &kp UP   &trans    &kp N0  &trans
-&trans     &kp LEFT     &kp DOWN     &kp RIGHT  &trans       &kp CLCK                      &kp PG_DN &kp LEFT  &kp DOWN &kp RIGHT &kp DEL &kp BSPC
-&trans     &kp K_UNDO   &kp K_CUT    &kp K_COPY   &kp K_PASTE  &trans &none                  &kp LC(PG_UP)    &kp LC(PG_DN)    &trans   &trans    &kp C_BRI_DN  &kp C_BRI_UP
+&trans     &trans       &trans       &kp RET   &trans  &out OUT_TOG                         &kp HOME &kp END    &kp UP   &trans    &kp N0  &trans
+&trans     &kp INS      &kp UP       &kp UP    &trans     &trans                            &kp PG_UP &trans    &kp UP   &trans    &kp N0  &trans
+&trans     &kp LEFT     &kp LEFT     &kp DOWN  &RIGHT       &kp CLCK                        &kp PG_DN &kp LEFT  &kp DOWN &kp RIGHT &kp DEL &kp BSPC
+&trans     &kp K_UNDO   &kp K_CUT    &kp K_COPY   &kp K_PASTE  &trans &none                 &kp LC(PG_UP)    &kp LC(PG_DN)    &trans   &trans    &kp C_BRI_DN  &kp C_BRI_UP
                         &trans       &trans       &trans       &trans        &trans  &kp F5  &trans    &tog RAISE    &kp K_VOL_DN  &kp K_VOL_UP
                                                                                      &kp A      &kp B  &kp C &kp D  &kp E
             >;
@@ -99,7 +99,7 @@
 // |        | RGB_BRD | RGB_BRI |         |         |         |                  |      |      |       |      |       |       |
 // |        |         |         |         |         |         | RGB_TOG | |      |      |      |       |      |       |       |
 //                    |         |         |         |         |         | |      |      |      |       |      |
-            label = "*Settings";
+            label = "Settings";
             bindings = <
 &bt BT_CLR        &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4                            &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4
 &ext_power EP_TOG &rgb_ug RGB_HUD &rgb_ug RGB_HUI &rgb_ug RGB_SAD &rgb_ug RGB_SAI &rgb_ug RGB_EFF                         &out OUT_TOG &none &none &none &none &none
