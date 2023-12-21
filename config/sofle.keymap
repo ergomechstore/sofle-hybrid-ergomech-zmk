@@ -40,7 +40,7 @@
 // | SHIFT |  Z  |  X  |  C   |  V   |  B   |  F5  |  |           |  N   |  M    |  ,    |  .   |   ;   | TERMINAL |
 //               | LCONTROL | ALT  | LGUI | SHIFT|  LOWER |  | LCTRL | SPACE| RAISE  | vol down   | vol up  |
             bindings = <
-&kp ESC &tog RAISE &kp HOME   &kp RET   &kp END    &kp LG(LS(S))               &kp MINUS &kp N7    &kp BSPC    &kp LPAR   &kp RPAR   &kp EQUAL
+&kp ESC &mo RAISE &kp HOME   &kp RET   &kp END    &kp LG(LS(S))               &kp MINUS &kp N7    &kp BSPC    &kp LPAR   &kp RPAR   &kp EQUAL
 &kp TAB   &kp Q  &kp W    &kp E    &kp R     &kp T                            &kp Y  &kp U     &kp I     &kp O    &kp P    &kp DEL
 &kp CAPS   &kp A  &kp S    &kp D    &kp F     &kp G                           &kp H  &kp J     &kp K     &kp L    &kp FSLH &kp SQT
 &kp LCTRL &kp Z  &kp X    &kp C    &kp V     &kp B      &kp F5                &kp N  &kp M     &kp COMMA &kp DOT  &kp SEMI &kp LC(LA(T))
@@ -52,7 +52,7 @@
         };
 
         lower_layer {
-            label = "Number-S";
+            label = "#-Symb";
 // TODO: Some binds are waiting for shifted keycode support.
 // ------------------------------------------------------------------------------------------------------------
 // |    ~  |  F1 |  F2 |  F3  |  F4  |  F5  |                     |  +  |  F7   |  F8   |  F9  |  F10  |  F11  |
@@ -65,7 +65,7 @@
 &kp PIPE   &kp EXCL  &kp AT    &kp HASH    &kp DLLR  &kp PRCNT                     &kp KP_MINUS    &kp N7   &kp N8  &kp N9  &kp N0    &kp F12
 &trans     &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LBRC  &kp RBRC                 &kp KP_MULTIPLY &kp N4   &kp N5  &kp N6  &kp RPAR  &kp PIPE
 &trans     &kp EQUAL &kp LBKT  &kp RBKT &kp LC(PG_UP)  &kp LC(PG_DN) &none         &kp KP_DIVIDE   &kp N1   &kp N2  &kp N3  &kp COLON &kp BSLH
-&kp UP     &kp DOWN      &kp LGUI    &kp LSHIFT     &trans                  &kp LCTRL  &kp SPACE       &kp N0   &kp KP_COMMA    &kp KP_DOT
+        &kp UP     &kp DOWN      &kp LGUI    &kp LSHIFT     &trans                  &kp LCTRL  &kp SPACE       &kp N0   &kp KP_COMMA    &kp KP_DOT
                                                                          &kp A   &kp RIGHT  &kp UP &kp LEFT  &kp DOWN
             >;
 
@@ -75,17 +75,17 @@
         raise_layer {
             label = "Navs";
 // ------------------------------------------------------------------------------------------------------------
-// |       |      |      |  RET  |       |BT TOG|                | HOME | END  |       |      |       |       |
-// |       | INS  | UP   | UP    |       |      |                | PGUP |      |   ^   |      |       |       |
+// |       |      | ESC  |  RET  |       |BT TOG|                | HOME | END  |       |      |       |       |
+// |       | INS  | TAB  | UP    |       |      |                | PGUP |      |   ^   |      |       |       |
 // |       | LEFT | LEFT | DOWN  | RIGHT | CAPS |                | PGDN |   <- |   v   |  ->  |  DEL  | BKSPC |
 // |       | UNDO | CUT  | COPY  | PASTE |      |      |  |      | tab- | tab+ |       |      | bright-|bright+ |
 //                |      |       |       |      |      |  |  F5  | TOGRAISE |      |vol-   |vol+  |
             bindings = <
-&trans     &trans       &trans       &kp RET   &trans  &out OUT_TOG                         &kp HOME &kp END    &kp UP   &trans    &kp N0  &trans
-&trans     &kp INS      &kp UP       &kp UP    &trans     &trans                            &kp PG_UP &trans    &kp UP   &trans    &kp N0  &trans
+&trans     &trans       &kp ESC       &kp RET   &trans  &out OUT_TOG                         &kp HOME &kp END    &kp UP   &trans    &kp N0  &trans
+&trans     &kp INS      &kp TAB       &kp UP    &trans     &trans                            &kp PG_UP &trans    &kp UP   &trans    &kp N0  &trans
 &trans     &kp LEFT     &kp LEFT     &kp DOWN  &kp RIGHT       &kp CLCK                        &kp PG_DN &kp LEFT  &kp DOWN &kp RIGHT &kp DEL &kp BSPC
 &trans     &kp K_UNDO   &kp K_CUT    &kp K_COPY   &kp K_PASTE  &trans &none                 &kp LC(PG_UP)    &kp LC(PG_DN)    &trans   &trans    &kp C_BRI_DN  &kp C_BRI_UP
-                        &trans       &trans       &trans       &trans        &trans  &kp F5  &trans    &tog RAISE    &kp K_VOL_DN  &kp K_VOL_UP
+                        &trans       &kp PIPE       &kp TILDE       &kp CAPS        &trans  &kp F5  &trans    &tog RAISE    &kp K_VOL_DN  &kp K_VOL_UP
                                                                                      &kp A      &kp B  &kp C &kp D  &kp E
             >;
 
