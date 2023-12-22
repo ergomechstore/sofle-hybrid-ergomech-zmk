@@ -45,7 +45,7 @@
 &kp CAPS   &kp A  &kp S    &kp D    &kp F     &kp G                           &kp H  &kp J     &kp K     &kp L    &kp FSLH &kp SQT
 &kp LCTRL &kp Z  &kp X    &kp C    &kp V     &kp B      &kp F5                &kp N  &kp M     &kp COMMA &kp DOT  &kp SEMI &kp LC(LA(T))
                  &kp LCTRL &kp LALT &kp LGUI &kp LSHIFT  &mo LOWER    &kp LCTRL  &kp SPACE  &tog RAISE &kp K_VOL_DN  &kp K_VOL_UP
-                                                                      &kp A      &mkp MB2  &kp UP &mkp MB3  &mkp MB1
+                                                                      &kp F5     &mkp MB2  &kp UP &mkp MB3  &mkp MB1
             >;
 
             sensor-bindings = <&inc_dec_kp DOWN UP &inc_dec_kp PG_UP PG_DN>;
@@ -61,12 +61,12 @@
 // |       |  =  |  [  |  ]   | pg dn | pg up |        |  |       |  /   |  1    |  2    |  3   |   \   |       |
 //               | UP | DOWN  |  GUI  | SHIFT |        |  |       |  space  |  0    |  ,    |  .   |
             bindings = <
-&kp TILDE  &kp F1    &kp F2    &kp F3      &kp F4    &kp F5                    &kp KP_PLUS     &kp F7   &kp F8  &kp F9  &kp F10   &kp F11
+&kp TILDE  &kp F1    &kp F2    &kp F3      &kp F4    &kp F5                       &kp KP_PLUS     &kp F7   &kp F8  &kp F9  &kp F10   &kp F11
 &kp PIPE   &kp EXCL  &kp AT    &kp HASH    &kp DLLR  &kp PRCNT                     &kp KP_MINUS    &kp N7   &kp N8  &kp N9  &kp N0    &kp F12
 &trans     &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LBRC  &kp RBRC                 &kp KP_MULTIPLY &kp N4   &kp N5  &kp N6  &kp RPAR  &kp PIPE
 &trans     &kp EQUAL &kp LBKT  &kp RBKT &kp LC(PG_UP)  &kp LC(PG_DN) &none         &kp KP_DIVIDE   &kp N1   &kp N2  &kp N3  &kp COLON &kp BSLH
         &kp UP     &kp DOWN      &kp LGUI    &kp LSHIFT     &trans                  &kp LCTRL  &kp SPACE       &kp N0   &kp KP_COMMA    &kp KP_DOT
-                                                                         &kp A   &kp RIGHT  &kp UP &kp LEFT  &kp DOWN
+                                                                         &kp RET   &kp RIGHT  &kp UP &kp LEFT  &kp DOWN
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN>;
@@ -86,7 +86,7 @@
 &trans     &kp LEFT     &kp LEFT     &kp DOWN  &kp RIGHT       &kp CLCK                        &kp PG_DN &kp LEFT  &kp DOWN &kp RIGHT &kp DEL &kp BSPC
 &trans     &kp K_UNDO   &kp K_CUT    &kp K_COPY   &kp K_PASTE  &trans &none                 &kp LC(PG_UP)    &kp LC(PG_DN)    &trans   &trans    &kp C_BRI_DN  &kp C_BRI_UP
                         &trans       &kp PIPE       &kp TILDE       &kp CAPS        &trans  &kp F5  &trans    &tog RAISE    &kp K_VOL_DN  &kp K_VOL_UP
-                                                                                     &kp A      &kp B  &kp C &kp D  &kp E
+                                                                                     &kp F5 &mkp MB2  &kp UP &mkp MB3  &mkp MB1
             >;
 
             sensor-bindings = <&inc_dec_kp PG_DN PG_UP &inc_dec_kp PG_UP PG_DN>;
