@@ -75,17 +75,17 @@
         raise_layer {
             label = "Navs";
 // ------------------------------------------------------------------------------------------------------------
-// |       |      | ESC  |  RET  |       |BT TOG|                | HOME | END  |       |      |       |       |
-// |       | INS  | TAB  | UP    |       |      |                | PGUP |      |   ^   |      |       |       |
+// |       |      | ESC  |  RET  |       |BT TOG|                | HOME | END  | BRWSER | FOLDER | SETTINGS |       |
+// |       | INS  | TAB  | UP    |       |      |                | PGUP | LC(W) |   ^   | LC(T) | LC(LS(T)) |       |
 // |       | LEFT | LEFT | DOWN  | RIGHT | CAPS |                | PGDN |   <- |   v   |  ->  |  DEL  | BKSPC |
 // |       | UNDO | CUT  | COPY  | PASTE |      |      |  |      | tab- | tab+ |       |      | bright-|bright+ |
-//                |      |       |       |      |      |  | trans | F5 |      |vol-   |vol+  |
+//                |      |       |       |      |      |  | LCTRL | F5 | LSHIFT |vol-   |vol+  |
             bindings = <
-&trans     &trans       &kp ESC       &kp RET   &trans  &out OUT_TOG                         &kp HOME &kp END    &kp UP   &trans    &kp N0  &trans
-&trans     &kp INS      &kp TAB       &kp UP    &trans     &trans                            &kp PG_UP &trans    &kp UP   &trans    &kp N0  &trans
+&trans     &trans       &kp ESC       &kp RET   &trans  &out OUT_TOG                         &kp HOME &kp END    &kp LG(N1)  &kp LG(N3)   &kp LG(N5) &trans
+&trans     &kp INS      &kp TAB       &kp UP    &trans     &trans                            &kp PG_UP &kp LC(W)    &kp UP   &kp LC(T)    &kp LC(LS(T))  &trans
 &trans     &kp LEFT     &kp LEFT     &kp DOWN  &kp RIGHT       &kp CLCK                        &kp PG_DN &kp LEFT  &kp DOWN &kp RIGHT &kp DEL &kp BSPC
 &trans     &kp K_UNDO   &kp K_CUT    &kp K_COPY   &kp K_PASTE  &trans &none                 &kp LC(PG_UP)    &kp LC(PG_DN)    &trans   &trans    &kp C_BRI_DN  &kp C_BRI_UP
-                        &trans       &kp PIPE       &kp TILDE       &kp CAPS        &trans  &kp F5  &trans    &tog RAISE    &kp K_VOL_DN  &kp K_VOL_UP
+                        &trans       &kp PIPE       &kp TILDE       &kp CAPS        &kp LCTRL  &kp F5  &kp LSHIFT    &tog RAISE    &kp K_VOL_DN  &kp K_VOL_UP
                                                                                      &tog RAISE &mkp MB2  &kp UP &mkp MB3  &mkp MB1
             >;
 
