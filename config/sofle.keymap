@@ -84,9 +84,9 @@
 &trans     &trans       &kp ESC       &kp RET   &trans  &out OUT_TOG                         &kp HOME &kp END    &kp LG(N1)  &kp LG(N3)   &kp LG(N5) &trans
 &trans     &kp INS      &kp TAB       &kp UP    &trans     &trans                            &kp PG_UP &kp LC(W)    &kp UP   &kp LC(T)    &kp LC(LS(T))  &trans
 &trans     &kp LEFT     &kp LEFT     &kp DOWN  &kp RIGHT       &kp CLCK                        &kp PG_DN &kp LEFT  &kp DOWN &kp RIGHT &kp DEL &kp BSPC
-&trans     &kp K_UNDO   &kp K_CUT    &kp K_COPY   &kp K_PASTE  &trans &none                 &kp LC(PG_UP)    &kp LC(PG_DN)    &trans   &trans    &kp C_BRI_DN  &kp C_BRI_UP
-                        &trans       &kp PIPE       &kp TILDE       &kp CAPS        &kp LCTRL  &kp F5  &kp LSHIFT    &tog RAISE    &kp K_VOL_DN  &kp K_VOL_UP
-                                                                                     &tog RAISE &mkp MB2  &kp UP &mkp MB3  &mkp MB1
+&trans     &kp K_UNDO   &kp K_CUT    &kp K_COPY   &kp K_PASTE  &trans &none                   &kp LC(PG_UP)    &kp LC(PG_DN)    &trans   &trans    &kp C_BRI_DN  &kp C_BRI_UP
+         &trans       &kp PIPE       &kp TILDE       &kp CAPS        &kp LCTRL        &kp LCTRL  &kp F5    &kp LSHIFT    &kp K_VOL_DN  &kp K_VOL_UP
+                                                                                      &tog RAISE &mkp MB2  &kp UP &mkp MB3  &mkp MB1
             >;
 
             sensor-bindings = <&inc_dec_kp PG_DN PG_UP &inc_dec_kp PG_UP PG_DN>;
