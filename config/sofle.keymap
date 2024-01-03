@@ -48,7 +48,7 @@
                                                                       &tog RAISE     &mkp MB2  &kp UP &mkp MB3  &mkp MB1
             >;
 
-            sensor-bindings = <&inc_dec_kp K_SCROLL_DOWN K_SCROLL_UP &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&inc_dec_kp DOWN UP &inc_dec_kp PG_UP PG_DN>;
         };
 
         lower_layer {
