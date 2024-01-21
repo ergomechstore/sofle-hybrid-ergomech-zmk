@@ -73,19 +73,19 @@
         };
 
         raise_layer {
-            label = "Navs";
+            label = "NAVS";
 // ------------------------------------------------------------------------------------------------------------
-// |       |      | ESC  |  RET  |       |BT TOG|                | HOME | END  | BRWSER | FOLDER | SETTINGS |   N6  |
-// |       | INS  | TAB  | UP    |       |      |                | PGUP | LC(W) |   ^   | LC(T) | LC(LS(T)) |   N7  |
-// |       | LEFT | LEFT | DOWN  | RIGHT | CAPS |                | PGDN |   <- |   v   |  ->  |  DEL  | BKSPC |
-// |       | UNDO | CUT  | COPY  | PASTE |      |      |  |      | tab- | tab+ |       |      | bright-|bright+ |
-//                |      |       |       |      |      |  | LCTRL | F5 | LSHIFT |vol-   |vol+  |
+// |   ESC |  1   |  2   |   3   |   4   |  5   |                | HOME | END   | BRWSER | FOLDER | SETTINGS |   N6  |
+// |   TAB |  Q   |  W   |   E   |   R   |  T   |                | PGUP | LC(W) |   ^   | LC(T) | LC(LS(T)) |   N7  |
+// | SHIFT |  A   |  S   |   D   |   F   |  G   |                | PGDN |   <-  |   v   |  ->  |  DEL  | BKSPC |
+// |  CTRL |  Z   |  X   |   C   |   V   |  B   |  F5  |   |     | tab- | tab+  |       |      | bright-|bright+ |
+//                |  Y   |   U   |   I   | SPACE | LOWER|  | LCTRL | F5 | LSHIFT |vol-   |vol+  |
             bindings = <
-&trans     &trans       &kp ESC       &kp RET   &trans  &out OUT_TOG                         &kp HOME      &kp END     &kp LG(N1)  &kp LG(N3)   &kp LG(N5)     &kp LG(N6)
-&trans     &kp INS      &kp TAB       &kp UP    &trans     &trans                            &kp PG_UP     &kp LC(W)   &kp UP      &kp LC(T)    &kp LC(LS(T))  &kp LG(N7)
-&trans     &kp LEFT     &kp LEFT     &kp DOWN  &kp RIGHT       &kp CLCK                      &kp PG_DN     &kp LEFT    &kp DOWN    &kp RIGHT    &kp DEL        &kp BSPC
-&trans     &kp K_UNDO   &kp K_CUT    &kp K_COPY   &kp K_PASTE  &trans &none                  &kp LC(PG_UP) &kp LC(PG_DN) &trans    &trans       &kp C_BRI_DN   &kp C_BRI_UP
-         &trans       &kp PIPE       &kp TILDE       &kp CAPS        &mo LOWER        &kp LCTRL  &kp F5    &kp LSHIFT    &kp K_VOL_DN  &kp K_VOL_UP
+&kp ESC     &kp N1       &kp N2     &kp N3    &kp N4   &kp N5                  &kp HOME      &kp END     &kp LG(N1)  &kp LG(N2)   &kp LG(N3)     &kp LG(N4)
+&kp TAB     &kp Q        &kp W      &kp E     &kp R    &kp T                   &kp PG_UP     &kp LC(W)   &kp UP      &kp LC(T)    &kp LC(LS(T))  &kp LG(N5)
+&kp LSHIFT  &kp A        &kp S      &kp D     &kp F    &kp G                   &kp PG_DN     &kp LEFT    &kp DOWN    &kp RIGHT    &kp DEL        &kp BSPC
+&kp LCTRL   &kp Z        &kp X      &kp C     &kp V    &kp B      &kp F5       &kp LC(PG_UP) &kp LC(PG_DN) &trans    &trans       &kp C_BRI_DN   &kp C_BRI_UP
+         &kp Y       &kp U       &kp I       &kp SPACE        &mo LOWER        &kp LCTRL  &kp F5    &kp LSHIFT    &kp K_VOL_DN  &kp K_VOL_UP
                                                                                       &tog RAISE &mkp MB2  &kp UP &mkp MB3  &mkp MB1
             >;
 
