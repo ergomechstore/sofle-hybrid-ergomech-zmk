@@ -86,7 +86,7 @@
 &kp LSHIFT  &kp A        &kp S      &kp D     &kp F    &kp G                   &kp PG_DN     &kp LEFT    &kp DOWN    &kp RIGHT    &kp DEL        &kp BSPC
 &kp LCTRL   &kp Z        &kp X      &kp C     &kp V    &kp B      &kp F5       &kp LC(PG_UP) &kp LC(PG_DN) &trans    &trans       &kp C_BRI_DN   &kp C_BRI_UP
          &kp Y       &kp U       &kp I       &kp SPACE        &mo LOWER        &kp LCTRL  &kp F5    &kp LSHIFT    &kp K_VOL_DN  &kp K_VOL_UP
-                                                                                      &tog RAISE &mkp MB2  &kp UP &mkp MB3  &mkp MB1
+                                                                                      &tog RAISE &mkp MB2  &kp LGUI &mkp MB3  &mkp MB1
             >;
 
             sensor-bindings = <&inc_dec_kp PG_DN PG_UP &inc_dec_kp PG_UP PG_DN>;
