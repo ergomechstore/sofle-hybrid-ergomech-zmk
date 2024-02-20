@@ -1,18 +1,18 @@
-# Sofle Choc Keyboard Guide
-This guide is for flashing the Ergomech Sofle Choc Keyboard. The Sofle Choc is 6×4+5 keys column-staggered split keyboard, using low profile Kailh Choc switches.
-Ergomech has modified the original Sofle Choc to include a 5 way switch on the right side keyboard instead of a rotary encoder.
+# Sofle Hybrid Keyboard Guide
+This guide is for flashing the Ergomech Sofle Hybrid Keyboard. The Sofle Hybrid is 6×4+5 keys column-staggered split keyboard, using low profile Kailh Hybrid switches.
+Ergomech has modified the original Sofle Hybrid to include a 5 way switch on the right side keyboard instead of a rotary encoder.
 
-# ErgoMech Sofle Choc Wireless
-The Ergomech Sofle Choc Wireless uses a Nice!Nano microcontroller and runs the ZMK firmware. This guide will show you how to flash the ZMK firmware to the Nice!Nano microcontroller.
+# ErgoMech Sofle Hybrid Wireless
+The Ergomech Sofle Hybrid Wireless uses a Nice!Nano microcontroller and runs the ZMK firmware. This guide will show you how to flash the ZMK firmware to the Nice!Nano microcontroller.
 
 ## Default keymap
-In an effort to create a keymap that is similar to the original keymap for the Sofle Keyboard, Ergomech has created a default keymap for the Sofle Choc. You may
-find that the keymap needs modifications to fit your needs, but it should be a good starting point. The default keymap was designed after the map shown [here](https://josefadamcik.github.io/SofleKeyboard/build_guide_choc.html)
-with the main difference being the 4th layer. The Ergomech Sofle Choc has bluetooth and other adjustments on the 4th layer.
+In an effort to create a keymap that is similar to the original keymap for the Sofle Keyboard, Ergomech has created a default keymap for the Sofle Hybrid. You may
+find that the keymap needs modifications to fit your needs, but it should be a good starting point. The default keymap was designed after the map shown [here](https://josefadamcik.github.io/SofleKeyboard/build_guide_Hybrid.html)
+with the main difference being the 4th layer. The Ergomech Sofle Hybrid has bluetooth and other adjustments on the 4th layer.
 
-## Flashing the Sofle Choc
+## Flashing the Sofle Hybrid
 The ZMK cli tool would typically have you step through several questions to generate the necessary code to flash the firmware then upload it to a new repository on GitHub.
-However, Ergomech has already done this for you. You can find the repository [here](https://github.com/nguyenhaiac/sofle-choc). Assuming you already have a GitHub account,
+However, Ergomech has already done this for you. You can find the repository [here](https://github.com/nguyenhaiac/sofle-Hybrid). Assuming you already have a GitHub account,
 you can fork the repository, and make modifications to the keymap files in the future. For now, the guide will continue with the assumption that you have forked the repository.
 
 ### Running the Workflow
@@ -28,7 +28,7 @@ local directory. The extracted files will include:
 
 ### Flashing the 'default' keymap and firmware
 #### Steps to ensure successful flashing
-- Keep in mind that the power switch on the wireless Ergomech Sofle Choc is only **one** of the ways that the keyboard can be powered. The other way is to plug in the USB-C cable.
+- Keep in mind that the power switch on the wireless Ergomech Sofle Hybrid is only **one** of the ways that the keyboard can be powered. The other way is to plug in the USB-C cable.
 When flashing one side of the keyboard, the other side must be off. 
 - The keyboard must be in bootloader mode to flash the firmware. To enter the bootloader mode, press the "BOOT" button twice in quick succession. 
 - If you are having trouble flashing, you can always flash the `settings_reset-nice_nano_v2-zmk.uf2` file first. This is a good way to make sure 
@@ -64,7 +64,7 @@ shown as a comment underneath the layer declaration.
 
 ### ZMK Firmware
 ZMK does provide an online [keymap editor](https://nickcoutsos.github.io/keymap-editor/) that can be used to create a keymap and generate
-the necessary files for flashing a **standard** Sofle Choc. However, the 5 way switch is not yet supported by the keymap editor.
+the necessary files for flashing a **standard** Sofle Hybrid. However, the 5 way switch is not yet supported by the keymap editor.
 This guide will show how to modify the generated files to include the 5 way switch.
 
 #### Modifying the keymap with the keymap editor
@@ -76,5 +76,5 @@ This guide will show how to modify the generated files to include the 5 way swit
 The exact spacing doesn't matter, but keeping the indentation consistent can be helpful for reading your keymap files. If you indent each button it will be easier
 to confirm the structure of the keymap. Take a look at the [default keymap](config/sofle.keymap) to see how this was done. 
 
-The Ergomech Sofle Choc has a 5 way switch on the right side keyboard. The location of the key presses on the 5 way switch are on the last line of the `bindings` section of each layer.
+The Ergomech Sofle Hybrid has a 5 way switch on the right side keyboard. The location of the key presses on the 5 way switch are on the last line of the `bindings` section of each layer.
 As long as the correct number of entries exist on that row, the 5 way switch will work. 
