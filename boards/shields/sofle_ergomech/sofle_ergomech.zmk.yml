@@ -1,0 +1,15 @@
+file_format: "1"
+id: sofle_ergomech
+name: Sofle by Ergomech
+type: shield
+url: https://github.com/ergomechstore/sofle-hybrid-ergomech
+requires: [pro_micro]
+exposes: [i2c_oled]
+features:
+  - keys
+  - display
+  - encoder
+  - underglow
+siblings:
+  - sofle_ergomech_left
+  - sofle_ergomech_right
