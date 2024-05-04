@@ -14,8 +14,8 @@
 ---
 include:
   - board: nice_nano_v2
-    shield: sofle_left
+    shield: sofle_ergomech_left
   - board: nice_nano_v2
-    shield: sofle_right
+    shield: sofle_ergomech_right
   - board: nice_nano_v2
     shield: settings_reset
