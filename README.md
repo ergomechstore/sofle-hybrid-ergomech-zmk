@@ -6,9 +6,8 @@ Ergomech has modified the original Sofle Hybrid to include a 5 way switch on the
 The Ergomech Sofle Hybrid Wireless uses a Nice!Nano microcontroller and runs the ZMK firmware. This guide will show you how to flash the ZMK firmware to the Nice!Nano microcontroller.
 
 ## Default keymap
-In an effort to create a keymap that is similar to the original keymap for the Sofle Keyboard, Ergomech has created a default keymap for the Sofle Hybrid. You may
-find that the keymap needs modifications to fit your needs, but it should be a good starting point. The default keymap was designed after the map shown [here](https://josefadamcik.github.io/SofleKeyboard/build_guide_Hybrid.html)
-with the main difference being the 4th layer. The Ergomech Sofle Hybrid has bluetooth and other adjustments on the 4th layer.
+The default keymap of this keyboard can be found here:
+![Default Keymap](./keymap.svg)
 
 ## Flashing the Sofle Hybrid
 The ZMK cli tool would typically have you step through several questions to generate the necessary code to flash the firmware then upload it to a new repository on GitHub.
@@ -63,9 +62,9 @@ will help you understand the changes we are making to the generated files. While
 shown as a comment underneath the layer declaration.
 
 ### ZMK Firmware
-ZMK does provide an online [keymap editor](https://nickcoutsos.github.io/keymap-editor/) that can be used to create a keymap and generate
-the necessary files for flashing a **standard** Sofle Hybrid. However, the 5 way switch is not yet supported by the keymap editor.
-This guide will show how to modify the generated files to include the 5 way switch.
+ZMK does provide an online [keymap editor](https://nickcoutsos.github.io/keymap-editor) and you can use this to change the keymap, this repo is already setup for the use of this editor. The 5 way swich can be mapped using the visual layout editor as well.
+
+**To support the layout editor, the push button for the encoder is moved to the bottom left of the textual keymap (sofle_ergomech.keymap file), you will need to remember this if you wish to change the keymap manually**
 
 #### Modifying the keymap with the keymap editor
 - The keymap editor is not yet configured to support the 5 way switch. If you use the keymap editor to generate the keymap, you will need to manually modify the files to include the 5 way switch.
@@ -74,7 +73,7 @@ This guide will show how to modify the generated files to include the 5 way swit
 
 #### Modifying the keymap manually
 The exact spacing doesn't matter, but keeping the indentation consistent can be helpful for reading your keymap files. If you indent each button it will be easier
-to confirm the structure of the keymap. Take a look at the [default keymap](config/sofle.keymap) to see how this was done. 
+to confirm the structure of the keymap. Take a look at the [default keymap](config/sofle_ergomech.keymap) to see how this was done. 
 
 The Ergomech Sofle Hybrid has a 5 way switch on the right side keyboard. The location of the key presses on the 5 way switch are on the last line of the `bindings` section of each layer.
 As long as the correct number of entries exist on that row, the 5 way switch will work. 
