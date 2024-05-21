@@ -11,7 +11,7 @@ The default keymap of this keyboard can be found here:
 
 ## Flashing the Sofle Hybrid
 The ZMK cli tool would typically have you step through several questions to generate the necessary code to flash the firmware then upload it to a new repository on GitHub.
-However, Ergomech has already done this for you. You can find the repository [here](https://github.com/nguyenhaiac/sofle-Hybrid). Assuming you already have a GitHub account,
+However, Ergomech has already done this for you. You can find the repository [here](https://github.com/ergomechstore/sofle-hybrid-ergomech). Assuming you already have a GitHub account,
 you can fork the repository, and make modifications to the keymap files in the future. For now, the guide will continue with the assumption that you have forked the repository.
 
 ### Running the Workflow
@@ -67,9 +67,9 @@ ZMK does provide an online [keymap editor](https://nickcoutsos.github.io/keymap-
 **To support the layout editor, the push button for the encoder is moved to the bottom left of the textual keymap (sofle_ergomech.keymap file), you will need to remember this if you wish to change the keymap manually**
 
 #### Modifying the keymap with the keymap editor
-- The keymap editor is not yet configured to support the 5 way switch. If you use the keymap editor to generate the keymap, you will need to manually modify the files to include the 5 way switch.
-- Make sure you create a new branch in your repository before saving any changes in the keymap editor, and select the new branch. The editor will commit the changes to the branch you have selected.
-- The commit made by the keymap editor will not have the necessary bindings for the 5 way switch. You will need to manually add the bindings to the keymap file.
+- The keymap editor is configured to support the 5 way switch.
+- Support for encoders will come soon, for now you can edit the function of the encoder by editing the keymap file.
+
 
 #### Modifying the keymap manually
 The exact spacing doesn't matter, but keeping the indentation consistent can be helpful for reading your keymap files. If you indent each button it will be easier
