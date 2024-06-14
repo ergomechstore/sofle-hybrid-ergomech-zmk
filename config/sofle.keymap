@@ -38,13 +38,13 @@
 // |  TAB  |  Q  |  W  |  E   |  R   |  T   |                       |  Y   |  U    |  I    |  O   |   P   | DEL   |
 // |  CAPS |  A  |  S  |  D   |  F   |  G   |                       |  H   |  J    |  K    |  L   |   /   |   '   |
 // | SHIFT |  Z  |  X  |  C   |  V   |  B   |  F5  |  |           |  N   |  M    |  ,    |  .   |   ;   | TERMINAL |
-//               | LCONTROL | ALT  | LGUI | SHIFT|  LOWER |  | LCTRL | SPACE| calc  | vol down   | vol up  |
+//               | LOWER| ALT  | LGUI | SHIFT|  LOWER |  | LCTRL | SPACE| calc  | vol down   | vol up  |
             bindings = <
 &kp ESC &mo RAISE &kp HOME   &kp RET   &kp END    &kp LG(LS(S))               &kp MINUS &kp N7    &kp BSPC    &kp LPAR   &kp RPAR   &kp EQUAL
 &kp TAB   &kp Q  &kp W    &kp E    &kp R     &kp T                            &kp Y  &kp U     &kp I     &kp O    &kp P    &kp DEL
 &kp CAPS   &kp A  &kp S    &kp D    &kp F     &kp G                           &kp H  &kp J     &kp K     &kp L    &kp FSLH &kp SQT
 &kp LCTRL &kp Z  &kp X    &kp C    &kp V     &kp B      &kp F5                &kp N  &kp M     &kp COMMA &kp DOT  &kp SEMI &kp LC(LA(T))
-                 &kp LCTRL &kp LALT &kp LGUI &kp LSHIFT  &mo LOWER    &kp LCTRL  &kp SPACE  &kp LC(LA(C)) &kp K_VOL_DN  &kp K_VOL_UP
+                 &tog LOWER &kp LALT &kp LGUI &kp LSHIFT  &mo LOWER    &kp LCTRL  &kp SPACE  &kp LC(LA(C)) &kp K_VOL_DN  &kp K_VOL_UP
                                                                       &tog RAISE     &mkp MB2  &kp LGUI &mkp MB3  &mkp MB1
             >;
 
