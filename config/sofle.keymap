@@ -55,17 +55,17 @@
             label = "#-Symb";
 // TODO: Some binds are waiting for shifted keycode support.
 // ------------------------------------------------------------------------------------------------------------
-// |    ~  |  F1 |  F2 |  F3  |  F4  |  F5  |                     |  +  |  F7   |  F8   |  F9  |  F10  |  F11  |
+// |    ~  |  F1 |  F2 |  F3  |  F4  |  F5  |                     |  +   |  F7   |  F8   |  F9  |  F10  |  F11  |
 // |   |   |  !  |  @  |  #   |  $   |  %   |                     |  -   |  7    |  8    |  9   |   0   |  F12  |
-// |       |  ^  |  &  |  *   |  {   |  }   |                     |  *   |  4    |  5    |  6   |   )   |   |   |
-// |       |  =  |  [  |  ]   | pg dn | pg up |        |  |       |  /   |  1    |  2    |  3   |   \   |       |
-//               | UP | DOWN  |  GUI  | SHIFT |        |  |       |  space  |  0    |  ,    |  .   |
+// |  CUT  | COPY| PASTE |  MK3 |  MK2 | MK1  |                   |  *   |  4    |  5    |  6   |   )   |   |   |
+// |   {   |  }  |  [  |  ]   | pg dn | pg up |        |  |       |  /   |  1    |  2    |  3   |   ;   |   \   |
+//        | TOG LOWER | DOWN  |  GUI  | SHIFT |        |  |       |  space  |  0    |  ,    |  .   |
             bindings = <
 &kp TILDE  &kp F1    &kp F2    &kp F3      &kp F4    &kp F5                       &kp KP_PLUS     &kp F7   &kp F8  &kp F9  &kp F10   &kp F11
-&kp PIPE   &kp EXCL  &kp AT    &kp HASH    &kp DLLR  &kp PRCNT                     &kp KP_MINUS    &kp N7   &kp N8  &kp N9  &kp N0    &kp F12
-&trans     &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LBRC  &kp RBRC                 &kp KP_MULTIPLY &kp N4   &kp N5  &kp N6  &kp RPAR  &kp PIPE
-&trans     &kp EQUAL &kp LBKT  &kp RBKT &kp LC(PG_UP)  &kp LC(PG_DN) &none         &kp KP_DIVIDE   &kp N1   &kp N2  &kp N3  &kp COLON &kp BSLH
-        &kp UP     &kp DOWN      &kp LGUI    &kp LSHIFT     &trans                  &kp LCTRL  &kp SPACE       &kp N0   &kp COMMA    &kp DOT
+&K_CUT   &kp EXCL  &kp AT    &kp HASH    &kp DLLR  &kp PRCNT                     &kp KP_MINUS    &kp N7   &kp N8  &kp N9  &kp N0    &kp F12
+&kp LC(X)   &kp LC(C) &kp LC(V)  &mkp MB3 &mkp MB2  &mkp MB1                 &kp KP_MULTIPLY &kp N4   &kp N5  &kp N6  &kp RPAR  &kp PIPE
+&kp LBRC &kp RBRC &kp LBKT  &kp RBKT &kp LC(PG_UP)  &kp LC(PG_DN) &kp F5         &kp KP_DIVIDE   &kp N1   &kp N2  &kp N3  &kp COLON &kp BSLH
+         &tog LOWER     &kp DOWN      &kp LALT    &kp LSHIFT     &trans                  &kp LCTRL  &kp SPACE       &kp N0   &kp COMMA    &kp DOT
                                                                          &kp RET   &kp RIGHT  &kp UP &kp LEFT  &kp DOWN
             >;
 
@@ -77,13 +77,13 @@
 // ------------------------------------------------------------------------------------------------------------
 // |   ESC |  1   |  2   |   3   |   4   |  5   |                | HOME | END   | BRWSER | FOLDER | SETTINGS |   N6  |
 // |   TAB |  Q   |  W   |   E   |   R   |  T   |                | PGUP | LC(W) |   ^   | LC(T) | LC(LS(T)) |   N7  |
-// | SHIFT |  A   |  S   |   D   |   F   |  G   |                | PGDN |   <-  |   v   |  ->  |  DEL  | BKSPC |
+// | SHIFT |  A   |  S   |   D   |   F   |  G   |                | PGDN |  PASTE| COPY  |  CUT  |  DEL  | BKSPC |
 // |  CTRL |  Z   |  X   |   C   |   V   |  B   |  F5  |   |     | tab- | tab+  |       |      | bright-|bright+ |
 //                |  Y   |   U   |   I   | SPACE | LOWER|  | LCTRL | F5 | LSHIFT |vol-   |vol+  |
             bindings = <
 &kp ESC     &kp N1       &kp N2     &kp N3    &kp N4   &kp N5                  &kp HOME      &kp END     &kp LG(N1)  &kp LG(N2)   &kp LG(N3)     &kp LG(N4)
 &kp TAB     &kp Q        &kp W      &kp E     &kp R    &kp T                   &kp PG_UP     &kp LC(W)   &kp UP      &kp LC(T)    &kp LC(LS(T))  &kp LG(N5)
-&kp LSHIFT  &kp A        &kp S      &kp D     &kp F    &kp G                   &kp PG_DN     &kp LEFT    &kp DOWN    &kp RIGHT    &kp DEL        &kp BSPC
+&kp LSHIFT  &kp A        &kp S      &kp D     &kp F    &kp G                   &kp PG_DN     &kp LC(V)    &kp LC(C)  &kp LC(X)    &kp DEL        &kp BSPC
 &kp LCTRL   &kp Z        &kp X      &kp C     &kp V    &kp B      &kp F5       &kp LC(PG_UP) &kp LC(PG_DN) &trans    &trans       &kp C_BRI_DN   &kp C_BRI_UP
          &kp Y       &kp U       &kp I       &kp SPACE        &mo LOWER        &kp LCTRL  &kp F5    &kp LSHIFT    &kp K_VOL_DN  &kp K_VOL_UP
                                                                                       &tog RAISE &mkp MB2  &kp LGUI &mkp MB3  &mkp MB1
