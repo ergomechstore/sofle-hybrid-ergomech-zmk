@@ -62,7 +62,7 @@
 //        | TOG LOWER | DOWN  |  GUI  | SHIFT |        |  |       |  space  |  0    |  ,    |  .   |
             bindings = <
 &kp TILDE  &kp F1    &kp F2    &kp F3      &kp F4    &kp F5                       &kp KP_PLUS     &kp F7   &kp F8  &kp F9  &kp F10   &kp F11
-&K_CUT   &kp EXCL  &kp AT    &kp HASH    &kp DLLR  &kp PRCNT                     &kp KP_MINUS    &kp N7   &kp N8  &kp N9  &kp N0    &kp F12
+& PIPE   &kp EXCL  &kp AT    &kp HASH    &kp DLLR  &kp PRCNT                     &kp KP_MINUS    &kp N7   &kp N8  &kp N9  &kp N0    &kp F12
 &kp LC(X)   &kp LC(C) &kp LC(V)  &mkp MB3 &mkp MB2  &mkp MB1                 &kp KP_MULTIPLY &kp N4   &kp N5  &kp N6  &kp RPAR  &kp PIPE
 &kp LBRC &kp RBRC &kp LBKT  &kp RBKT &kp LC(PG_UP)  &kp LC(PG_DN) &kp F5         &kp KP_DIVIDE   &kp N1   &kp N2  &kp N3  &kp COLON &kp BSLH
          &tog LOWER     &kp DOWN      &kp LALT    &kp LSHIFT     &trans                  &kp LCTRL  &kp SPACE       &kp N0   &kp COMMA    &kp DOT
