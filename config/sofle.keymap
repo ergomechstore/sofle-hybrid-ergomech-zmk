@@ -48,7 +48,7 @@
                                                                       &tog RAISE     &mkp MB2  &kp LGUI &mkp MB3  &mkp MB1
             >;
 
-            sensor-bindings = <&rot_kp DOWN UP>;
+            sensor-bindings = <&inc_dec_kp MB4 MB5>;
         };
 
         lower_layer {
