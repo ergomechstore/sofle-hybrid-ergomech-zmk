@@ -5,6 +5,8 @@
  */
 
  #include <dt-bindings/zmk/matrix_transform.h>
+ #include "sofle_ergomech-layouts.dtsi"
+
 
  / {
      chosen {
