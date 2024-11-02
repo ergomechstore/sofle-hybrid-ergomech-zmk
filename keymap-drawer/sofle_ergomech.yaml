@@ -148,10 +148,10 @@ layers:
   - UP
   - Ctl+ RIGHT
   - END
-  - '&msc SCROLL_UP'
-  - '&msc SCROLL_LEFT'
+  - '&msc MOVE_UP'
+  - '&msc MOVE_LEFT'
   - '&mmv MOVE_UP'
-  - '&msc SCROLL_RIGHT'
+  - '&msc MOVE_RIGHT'
   - '&mkp MB5'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -160,7 +160,7 @@ layers:
   - DOWN
   - RIGHT
   - Sft+ RIGHT
-  - '&msc SCROLL_DOWN'
+  - '&msc MOVE_DOWN'
   - '&mmv MOVE_LEFT'
   - '&mmv MOVE_DOWN'
   - '&mmv MOVE_RIGHT'
