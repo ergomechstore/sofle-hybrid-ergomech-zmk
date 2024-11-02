@@ -9,7 +9,7 @@ manifest:
       #remote: zmkfirmware
       #revision: main
       remote: petejohanson
-      revision: feat/pointers-move-scroll
+      revision: feat/pointers-with-input-processors
       import: app/west.yml
   self:
     path: config
