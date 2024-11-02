@@ -1,20 +1,6 @@
 layers:
-  default: ['`', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '', ESC, Q, W, E, R, T, Y, U, I, O, P, BSPC, TAB, A, S, D, F, G, H, J, K, L, ;, '''', LSHFT, Z,
-    X, C, V, B, N, M, ',', ., /, RSHFT, MUTE, LGUI, LALT, LCTRL, lower, RET, SPACE, raise, RCTRL, RALT, RGUI, ENTER, RIGHT, UP ARROW, LEFT, DOWN]
-  lower:
-  - {t: ▽, type: trans}
-  - F1
-  - F2
-  - F3
-  - F4
-  - F5
-  - F6
-  - F7
-  - F8
-  - F9
-  - F10
-  - F11
-  - '`'
+  default:
+  - {t: ESC, s: '`'}
   - '1'
   - '2'
   - '3'
@@ -25,112 +11,189 @@ layers:
   - '8'
   - '9'
   - '0'
-  - F12
+  - BACKSPACE
+  - '&caps'
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - '-'
+  - TAB
+  - A
+  - S
+  - D
+  - F
+  - G
+  - H
+  - J
+  - K
+  - L
+  - ;
+  - ENTER
+  - LSHFT
+  - Z
+  - X
+  - C
+  - V
+  - B
+  - N
+  - M
+  - ','
+  - .
+  - /
+  - ''''
+  - MUTE
+  - LGUI
+  - LEFT CONTROL
+  - {t: DELETE, h: LEFT ALT}
+  - {t: BACKSPACE, h: lower}
+  - RET
+  - SPACE
+  - {t: LEFT, h: raise}
+  - {t: DOWN, h: RIGHT ALT}
+  - {t: UP, h: RIGHT CONTROL}
+  - {t: RIGHT, h: RGUI}
+  - PRINTSCREEN
+  - RIGHT
+  - UP ARROW
+  - LEFT
+  - DOWN
+  lower:
+  - '`'
+  - '6'
+  - '7'
+  - '8'
+  - '9'
+  - '0'
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
   - {t: ▽, type: trans}
-  - '!'
-  - '@'
-  - '#'
-  - $
-  - '%'
-  - ^
-  - '&'
-  - '*'
-  - (
-  - )
+  - {t: ▽, type: trans}
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - '['
+  - '7'
+  - '8'
+  - '9'
+  - ']'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - H
+  - J
+  - K
+  - L
+  - ;
+  - '='
+  - '4'
+  - '5'
+  - '6'
+  - +
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - N
+  - M
+  - ','
+  - .
+  - /
+  - \
+  - '1'
+  - '2'
+  - '3'
   - '|'
   - {t: ▽, type: trans}
-  - '='
-  - '-'
-  - +
-  - '{'
-  - '}'
-  - '['
-  - ']'
-  - ;
-  - ':'
-  - \
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - Ctl+ X
+  - Ctl+ C
+  - Ctl+ V
   - {type: held}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - A
-  - B
-  - C
-  - D
-  - E
+  - '-'
+  - {t: '0', h: raise}
+  - .
+  - (
+  - )
+  - RIGHT SHIFT
+  - END
+  - PAGE UP
+  - HOME
+  - PAGE DOWN
   raise:
-  - BT CLR
-  - {t: BT, h: '0'}
-  - {t: BT, h: '1'}
-  - {t: BT, h: '2'}
-  - {t: BT, h: '3'}
-  - {t: BT, h: '4'}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - INS
-  - PSCRN
-  - CMENU
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - ''
+  - ''
   - PG UP
+  - ''
+  - ''
   - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - HOME
+  - Ctl+ LEFT
   - UP
+  - Ctl+ RIGHT
+  - END
+  - '&msc SCROLL_UP'
+  - '&msc SCROLL_LEFT'
+  - '&mmv MOVE_UP'
+  - '&msc SCROLL_RIGHT'
+  - '&mkp MB5'
   - {t: ▽, type: trans}
-  - '0'
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - LALT
-  - LCTRL
-  - LSHFT
-  - {t: ▽, type: trans}
-  - CLCK
-  - PG DN
+  - Sft+ LEFT
   - LEFT
   - DOWN
   - RIGHT
-  - DEL
-  - BSPC
-  - {t: ▽, type: trans}
-  - UNDO
-  - CUT
-  - COPY
-  - PASTE
-  - {t: ▽, type: trans}
+  - Sft+ RIGHT
+  - '&msc SCROLL_DOWN'
+  - '&mmv MOVE_LEFT'
+  - '&mmv MOVE_DOWN'
+  - '&mmv MOVE_RIGHT'
+  - '&mkp MB4'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - Sft+ HOME
+  - Sft+Ctl+ LEFT
+  - PG DN
+  - Sft+Ctl+ RIGHT
+  - Sft+ END
+  - '&mkp LCLK'
+  - '&mkp RCLK'
+  - '&mkp MCLK'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - PRINTSCREEN
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&mkp LCLK'
   - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - A
-  - B
-  - C
-  - D
-  - E
+  - '&mkp LCLK'
+  - '&mmv MOVE_RIGHT'
+  - '&mmv MOVE_UP'
+  - '&mmv MOVE_LEFT'
+  - '&mmv MOVE_DOWN'
   adjust:
   - BT CLR
   - {t: BT, h: '0'}
@@ -138,30 +201,22 @@ layers:
   - {t: BT, h: '2'}
   - {t: BT, h: '3'}
   - {t: BT, h: '4'}
-  - ''
-  - ''
-  - ''
-  - ''
+  - KP NUMLOCK
+  - F10
+  - F11
+  - F12
   - ''
   - '&studio_unlock'
-  - EP TOG
-  - RGB HUD
-  - RGB HUI
-  - RGB SAD
-  - RGB SAI
-  - RGB EFF
+  - BT CLR ALL
   - ''
   - ''
   - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - RGB BRD
-  - RGB BRI
-  - ''
-  - ''
-  - ''
+  - OUT USB
+  - OUT BLE
+  - INSERT
+  - F7
+  - F8
+  - F9
   - ''
   - ''
   - ''
@@ -170,17 +225,25 @@ layers:
   - ''
   - ''
   - ''
+  - SCROLLLOCK
+  - F4
+  - F5
+  - F6
+  - ''
+  - ''
+  - '&bootloader'
   - ''
   - ''
   - ''
   - ''
+  - '&sys_reset'
+  - '&sys_reset'
+  - F1
+  - F2
+  - F3
   - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - RGB TOG
+  - '&bootloader'
+  - Alt+ F4
   - ''
   - ''
   - ''
@@ -191,8 +254,8 @@ layers:
   - ''
   - ''
   - ''
-  - A
-  - B
-  - C
-  - D
-  - E
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
