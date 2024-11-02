@@ -98,8 +98,8 @@
 
             bindings = <
 &trans           &none         &none             &kp PG_UP  &none              &none          &trans            &trans            &trans          &trans             &trans          &trans
-&trans           &kp HOME      &kp LC(LEFT)      &kp UP     &kp LC(RIGHT)      &kp END        &msc SCROLL_UP    &msc SCROLL_LEFT  &mmv MOVE_UP    &msc SCROLL_RIGHT  &mkp MB5        &trans
-&trans           &kp LS(LEFT)  &kp LEFT          &kp DOWN   &kp RIGHT          &kp LS(RIGHT)  &msc SCROLL_DOWN  &mmv MOVE_LEFT    &mmv MOVE_DOWN  &mmv MOVE_RIGHT    &mkp MB4        &trans
+&trans           &kp HOME      &kp LC(LEFT)      &kp UP     &kp LC(RIGHT)      &kp END        &msc MOVE_UP      &msc MOVE_LEFT    &mmv MOVE_UP    &msc MOVE_RIGHT    &mkp MB5        &trans
+&trans           &kp LS(LEFT)  &kp LEFT          &kp DOWN   &kp RIGHT          &kp LS(RIGHT)  &msc MOVE_DOWN    &mmv MOVE_LEFT    &mmv MOVE_DOWN  &mmv MOVE_RIGHT    &mkp MB4        &trans
 &trans           &kp LS(HOME)  &kp LS(LC(LEFT))  &kp PG_DN  &kp LS(LC(RIGHT))  &kp LS(END)    &mkp LCLK         &mkp RCLK         &mkp MCLK       &trans             &trans          &trans
 &kp PRINTSCREEN  &trans        &trans            &trans     &trans             &trans         &mkp LCLK         &trans            &trans          &trans             &trans
                                                                                               &mkp LCLK         &mmv MOVE_RIGHT   &mmv MOVE_UP    &mmv MOVE_LEFT     &mmv MOVE_DOWN
