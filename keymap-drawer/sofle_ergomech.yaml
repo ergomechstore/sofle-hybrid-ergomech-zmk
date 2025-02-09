@@ -1,6 +1,69 @@
 layers:
-  default: ['`', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '', ESC, Q, W, E, R, T, Y, U, I, O, P, BSPC, TAB, A, S, D, F, G, H, J, K, L, ;, '''', LSHFT, Z,
-    X, C, V, B, N, M, ',', ., /, RSHFT, MUTE, LGUI, LALT, LCTRL, lower, RET, SPACE, raise, RCTRL, RALT, RGUI, ENTER, RIGHT, UP ARROW, LEFT, DOWN]
+  default:
+  - '='
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  - '5'
+  - '6'
+  - '7'
+  - '8'
+  - '9'
+  - '0'
+  - \
+  - '`'
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - '-'
+  - TAB
+  - {t: A, h: LGUI}
+  - {t: S, h: LEFT ALT}
+  - {t: D, h: LCTRL}
+  - {t: F, h: LEFT SHIFT}
+  - G
+  - H
+  - {t: J, h: RIGHT SHIFT}
+  - {t: K, h: RCTRL}
+  - {t: L, h: RIGHT ALT}
+  - {t: ;, h: RGUI}
+  - ''''
+  - '&caps_word'
+  - Z
+  - X
+  - C
+  - V
+  - B
+  - N
+  - M
+  - ','
+  - .
+  - /
+  - {t: DELETE, h: sticky}
+  - MUTE
+  - PG UP
+  - HOME
+  - PAGE DOWN
+  - {t: SPACE, h: raise}
+  - {t: ESC, h: adjust}
+  - {t: ENTER, h: lower}
+  - {t: BACKSPACE, h: raise}
+  - (
+  - '['
+  - )
+  - ENTER
+  - RIGHT
+  - UP ARROW
+  - LEFT
+  - DOWN
   lower:
   - {t: ▽, type: trans}
   - F1
@@ -15,11 +78,11 @@ layers:
   - F10
   - F11
   - '`'
-  - '1'
-  - '2'
-  - '3'
-  - '4'
-  - '5'
+  - '{'
+  - '&'
+  - '*'
+  - '{'
+  - '}'
   - '6'
   - '7'
   - '8'
@@ -27,11 +90,11 @@ layers:
   - '0'
   - F12
   - {t: ▽, type: trans}
-  - '!'
-  - '@'
-  - '#'
+  - ':'
   - $
   - '%'
+  - ^
+  - +
   - ^
   - '&'
   - '*'
@@ -39,11 +102,11 @@ layers:
   - )
   - '|'
   - {t: ▽, type: trans}
-  - '='
-  - '-'
-  - +
-  - '{'
-  - '}'
+  - '~'
+  - '!'
+  - '@'
+  - '#'
+  - '|'
   - '['
   - ']'
   - ;
@@ -53,19 +116,19 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - (
+  - )
+  - {t: default, h: toggle}
   - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - A
-  - B
-  - C
-  - D
-  - E
+  - '&mkp MB1'
+  - '&mmv MOVE_RIGHT'
+  - '&mmv MOVE_UP'
+  - '&mmv MOVE_LEFT'
+  - '&mmv MOVE_DOWN'
   raise:
   - BT CLR
   - {t: BT, h: '0'}
@@ -119,10 +182,10 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -184,10 +247,10 @@ layers:
   - ''
   - ''
   - ''
+  - {t: lower, h: toggle}
   - {type: held}
   - ''
   - ''
-  - {type: held}
   - ''
   - ''
   - ''
