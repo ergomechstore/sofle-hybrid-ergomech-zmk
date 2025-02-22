@@ -45,10 +45,10 @@
              &studio_unlock   &kp LGUI &kp LALT &kp LCTRL &mo LOWER  &kp RET    &kp SPACE  &mo RAISE  &kp RCTRL &kp RALT  &kp RGUI
                                                                    &kp A      &kp B  &kp C &kp D  &kp E
             >;
-```
+
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
-111`
+
         lower_layer {
             label = "lower";
 // TODO: Some binds are waiting for shifted keycode support.
