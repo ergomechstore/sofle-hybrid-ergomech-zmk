@@ -4,7 +4,6 @@
     layout_0: layout_0 {
         compatible = "zmk,physical-layout";
         display-name = "LAYOUT";
-        kscan = <&kscan_0>;
         transform = <&matrix_transform_0>;
 
         keys  //                     w   h    x    y     rot    rx    ry
