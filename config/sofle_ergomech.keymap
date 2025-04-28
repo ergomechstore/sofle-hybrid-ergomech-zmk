@@ -85,12 +85,12 @@
             //                |      |       |       |      |      |  |      |      |      |       |      |
 
             bindings = <
-&trans          &kp F1            &kp F2           &kp F3            &kp F4           &kp F5  &kp F6            &kp F7          &kp F8             &kp F9           &kp F10        &kp F11
-&trans          &msc MOVE_Y(-20)  &msc MOVE_Y(-5)  &msc MOVE_Y(5)    &msc MOVE_Y(20)  &trans  &msc SCRL_UP      &msc SCRL_LEFT  &mmv MOVE_UP       &msc SCRL_RIGHT  &trans         &kp F12
-&trans          &msc MOVE_X(-20)  &msc MOVE_X(-5)  &msc MOVE_X(5)    &msc MOVE_X(20)  &trans  &msc SCRL_DOWN    &mmv MOVE_LEFT  &mmv MOVE_DOWN     &mmv MOVE_RIGHT  &trans         &trans
-&kp LEFT_SHIFT  &trans            &trans           &trans            &trans           &trans  &kp LANG_HANGEUL  &mkp LCLK       &kp LANGUAGE_2     &mkp RCLK        &trans         &kp RIGHT_SHIFT
-&trans          &kp LEFT_GUI      &kp LEFT_ALT     &kp LEFT_CONTROL  &trans           &trans  &trans            &trans          &kp RIGHT_CONTROL  &kp RIGHT_ALT    &kp RIGHT_GUI
-                                                                                              &kp A             &kp B           &kp C              &kp D            &kp E
+&trans          &kp F1            &kp F2           &kp F3            &kp F4           &kp F5  &kp F6            &kp F7           &kp F8             &kp F9           &kp F10         &kp F11
+&trans          &msc MOVE_Y(-20)  &msc MOVE_Y(-5)  &msc MOVE_Y(5)    &msc MOVE_Y(20)  &trans  &msc SCRL_UP      &msc SCRL_LEFT   &mmv MOVE_UP       &msc SCRL_RIGHT  &trans          &kp F12
+&trans          &msc MOVE_X(-20)  &msc MOVE_X(-5)  &msc MOVE_X(5)    &msc MOVE_X(20)  &trans  &msc SCRL_DOWN    &mmv MOVE_LEFT   &mmv MOVE_DOWN     &mmv MOVE_RIGHT  &trans          &trans
+&kp LEFT_SHIFT  &trans            &trans           &trans            &trans           &trans  &kp LANG_HANGEUL  &mkp LCLK        &kp LANGUAGE_2     &mkp RCLK        &trans          &kp RIGHT_SHIFT
+&trans          &kp LEFT_GUI      &kp LEFT_ALT     &kp LEFT_CONTROL  &trans           &trans  &trans            &trans           &kp RIGHT_CONTROL  &kp RIGHT_ALT    &kp RIGHT_GUI
+                                                                                              &mkp RCLK         &mmv MOVE_RIGHT  &mmv MOVE_UP       &mmv MOVE_LEFT   &mmv MOVE_DOWN
             >;
 
             sensor-bindings =
