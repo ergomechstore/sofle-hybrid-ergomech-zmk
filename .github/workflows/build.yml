@@ -1,21 +1,48 @@
-on: [push, pull_request, workflow_dispatch]
+name: Build Sofle Firmware
+
+on:
+  push:
+    branches: [main]
 
 jobs:
-  build:
-    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
-    with:
-    board: nice_nano_v2  # 실제 사용하는 보드
-      shield: sofle_left    # 왼쪽 쉴드
-    board: nice_nano_v2
-      shield: sofle_right   # 오른쪽 쉴드
+  build_left:
+    runs-on: ubuntu-latest
     steps:
-      name: Copy Firmware
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      - name: Build Left Firmware
+        run: |
+          west build -b nice_nano_v2 -- -DSHIELD=sofle_left -DZMK_CONFIG=config
+      - name: Copy Left Firmware
         run: |
           mkdir -p firmware
           cp build/zephyr/zmk.uf2 firmware/sofle_left.uf2
-          cp build/zephyr/zmk.uf2 firmware/sofle_right.uf2
-      name: Upload Artifact
+      - name: Upload Left Firmware Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: firmware
-          path: firmware/*.uf2
+          name: firmware-left
+          path: firmware/sofle_left.uf2
+
+  build_right:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      - name: Build Right Firmware
+        run: |
+          west build -b nice_nano_v2 -- -DSHIELD=sofle_right -DZMK_CONFIG=config
+      - name: Copy Right Firmware
+        run: |
+          mkdir -p firmware
+          cp build/zephyr/zmk.uf2 firmware/sofle_right.uf2
+      - name: Upload Right Firmware Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: firmware-right
+          path: firmware/sofle_right.uf2
