@@ -108,12 +108,12 @@
 
             label = "adjust";
             bindings = <
-&bt BT_CLR                &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none  &none  &none  &none  &none  &none
-&trans                    &trans        &trans        &trans        &trans        &trans        &none  &none  &none  &none  &none  &none
-&none                     &trans        &trans        &none         &none         &none         &none  &none  &none  &none  &none  &none
-&none                     &none         &none         &none         &none         &none         &none  &none  &none  &none  &none  &none
-&kp C_BRIGHTNESS_MINIMUM  &none         &none         &none         &none         &none         &none  &none  &none  &none  &none
-                                                                                                &kp A  &kp B  &kp C  &kp D  &kp E
+&bt BT_CLR                &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans  &trans  &trans  &trans  &trans  &trans
+&trans                    &trans        &trans        &trans        &trans        &trans        &trans  &trans  &trans  &trans  &trans  &trans
+&trans                    &trans        &trans        &trans        &trans        &trans        &trans  &trans  &trans  &trans  &trans  &trans
+&trans                    &trans        &trans        &trans        &trans        &trans        &trans  &trans  &trans  &trans  &trans  &trans
+&kp C_BRIGHTNESS_MINIMUM  &trans        &trans        &trans        &trans        &trans        &trans  &trans  &trans  &trans  &trans
+                                                                                                &kp A   &kp B   &kp C   &kp D   &kp E
             >;
 
             sensor-bindings = <&inc_dec_kp C_BRIGHTNESS_INC C_BRIGHTNESS_DEC>;
