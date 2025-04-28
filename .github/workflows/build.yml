@@ -3,3 +3,19 @@ on: [push, pull_request, workflow_dispatch]
 jobs:
   build:
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+    with:
+    board: nice_nano_v2  # 실제 사용하는 보드
+      shield: sofle_left    # 왼쪽 쉴드
+    board: nice_nano_v2
+      shield: sofle_right   # 오른쪽 쉴드
+    steps:
+      name: Copy Firmware
+        run: |
+          mkdir -p firmware
+          cp build/zephyr/zmk.uf2 firmware/sofle_left.uf2
+          cp build/zephyr/zmk.uf2 firmware/sofle_right.uf2
+      name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: firmware
+          path: firmware/*.uf2
