@@ -1,0 +1,48 @@
+name: Build Sofle Firmware
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build_left:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      - name: Build Left Firmware
+        run: |
+          west build -b nice_nano_v2 -- -DSHIELD=sofle_left -DZMK_CONFIG=config
+      - name: Copy Left Firmware
+        run: |
+          mkdir -p firmware
+          cp build/zephyr/zmk.uf2 firmware/sofle_left.uf2
+      - name: Upload Left Firmware Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: firmware-left
+          path: firmware/sofle_left.uf2
+
+  build_right:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      - name: Build Right Firmware
+        run: |
+          west build -b nice_nano_v2 -- -DSHIELD=sofle_right -DZMK_CONFIG=config
+      - name: Copy Right Firmware
+        run: |
+          mkdir -p firmware
+          cp build/zephyr/zmk.uf2 firmware/sofle_right.uf2
+      - name: Upload Right Firmware Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: firmware-right
+          path: firmware/sofle_right.uf2
