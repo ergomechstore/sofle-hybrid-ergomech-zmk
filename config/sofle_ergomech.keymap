@@ -6,10 +6,8 @@
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
-#include <dt-bindings/zmk/rgb.h>
 
 #define BASE 0
 #define LOWER 1
@@ -110,13 +108,15 @@
 
             label = "adjust";
             bindings = <
-&bt BT_CLR         &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4     &none  &none  &none  &none  &none  &none
-&ext_power EP_TOG  &rgb_ug RGB_HUD  &rgb_ug RGB_HUI  &rgb_ug RGB_SAD  &rgb_ug RGB_SAI  &rgb_ug RGB_EFF  &none  &none  &none  &none  &none  &none
-&none              &rgb_ug RGB_BRD  &rgb_ug RGB_BRI  &none            &none            &none            &none  &none  &none  &none  &none  &none
-&none              &none            &none            &none            &none            &none            &none  &none  &none  &none  &none  &none
-&rgb_ug RGB_TOG    &none            &none            &none            &none            &none            &none  &none  &none  &none  &none
-                                                                                                        &kp A  &kp B  &kp C  &kp D  &kp E
+&bt BT_CLR                &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none  &none  &none  &none  &none  &none
+&trans                    &trans        &trans        &trans        &trans        &trans        &none  &none  &none  &none  &none  &none
+&none                     &trans        &trans        &none         &none         &none         &none  &none  &none  &none  &none  &none
+&none                     &none         &none         &none         &none         &none         &none  &none  &none  &none  &none  &none
+&kp C_BRIGHTNESS_MINIMUM  &none         &none         &none         &none         &none         &none  &none  &none  &none  &none
+                                                                                                &kp A  &kp B  &kp C  &kp D  &kp E
             >;
+
+            sensor-bindings = <&inc_dec_kp C_BRIGHTNESS_INC C_BRIGHTNESS_DEC>;
         };
     };
 };
