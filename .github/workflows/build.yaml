@@ -12,6 +12,11 @@
 #     shield: reviung41
 #
 ---
+
+on:
+  push:
+    branches: [main]
+
 include:
   - board: nice_nano_v2
     shield: sofle_ergomech_left
