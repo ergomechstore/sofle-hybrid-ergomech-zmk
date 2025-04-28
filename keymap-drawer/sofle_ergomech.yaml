@@ -127,11 +127,11 @@ layers:
   - RIGHT CONTROL
   - RIGHT ALT
   - RIGHT GUI
-  - A
-  - B
-  - C
-  - D
-  - E
+  - '&mkp RCLK'
+  - '&mmv MOVE_RIGHT'
+  - '&mmv MOVE_UP'
+  - '&mmv MOVE_LEFT'
+  - '&mmv MOVE_DOWN'
   adjust:
   - BT CLR
   - {t: BT, h: '0'}
