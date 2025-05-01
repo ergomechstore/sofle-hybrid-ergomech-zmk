@@ -1,5 +1,37 @@
-on: [push, pull_request, workflow_dispatch]
+name: Build ZMK Firmware
+
+on:
+  push:
+    paths:
+      - "config/**"
+      - "zmk-config/**"
 
 jobs:
   build:
-    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup ZMK
+        run: |
+          west init -m https://github.com/zmkfirmware/zmk-config-android
+          west update
+
+      - name: Build Left
+        run: |
+          west build -d build/left -b nice_nano_v2 -- -DSHIELD=sofle_left
+          mv build/left/zephyr/zmk.uf2 sofle_left-nice_nano_v2-zmk.uf2
+
+      - name: Build Right
+        run: |
+          west build -d build/right -b nice_nano_v2 -- -DSHIELD=sofle_right
+          mv build/right/zephyr/zmk.uf2 sofle_right-nice_nano_v2-zmk.uf2
+
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: firmware
+          path: |
+            sofle_left-nice_nano_v2-zmk.uf2
+            sofle_right-nice_nano_v2-zmk.uf2
