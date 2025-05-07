@@ -16,7 +16,7 @@
 #define SNIPE 5
 
 &default_transform {
-    row-offset = <5>;
+    row-offset = <6>;
 };
 
 &kscan0{
