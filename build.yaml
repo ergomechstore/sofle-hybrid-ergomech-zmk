@@ -15,9 +15,12 @@
 include:
   - board: nice_nano_v2
     shield: sofle_ergomech_left
+    snippet: zmk-usb-logging
   - board: nice_nano_v2
     shield: sofle_ergomech_right
+    snippet: zmk-usb-logging
   - board: seeeduino_xiao_ble
     shield: sofle_ergomech_mouse
+    snippet: zmk-usb-logging
   - board: nice_nano_v2
     shield: settings_reset
