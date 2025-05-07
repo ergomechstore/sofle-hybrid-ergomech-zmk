@@ -6,10 +6,6 @@
 
 #include "sofle_ergomech.dtsi"
 
-&chosen{
-    zephyr,display = &oled;
-}
-
 / {
 chosen {
         zephyr,display = &oled;
