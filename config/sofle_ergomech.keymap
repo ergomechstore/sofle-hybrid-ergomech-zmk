@@ -211,7 +211,7 @@
 &trans             &trans             &trans             &trans        &trans        &trans        &trans  &trans      &trans              &trans  &trans         &trans
 &trans             &trans             &trans             &trans        &trans        &trans        &trans  &trans      &trans              &trans  &trans
                                                                                                    &trans  &trans      &kp LC(LEFT_SHIFT)  &trans  &kp RG(SPACE)
-&kp GRAVE &kp N1 &kp N2   &kp N3   &kp N4    &kp N5
+&bootloader &kp N1 &kp N2   &kp N3   &kp N4    &kp N5
             >;
         };
     };
