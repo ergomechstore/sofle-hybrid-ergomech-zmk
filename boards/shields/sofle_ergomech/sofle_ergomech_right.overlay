@@ -10,6 +10,16 @@
     zephyr,display = &oled;
 }
 
+/ {
+chosen {
+        zephyr,display = &oled;
+        zmk,kscan = &kscan0;
+        zmk,matrix-transform = &default_transform;
+        };
+
+
+
+}
 
 &default_transform {
     col-offset = <6>;
