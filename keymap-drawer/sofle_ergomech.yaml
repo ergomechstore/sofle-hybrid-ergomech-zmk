@@ -58,7 +58,7 @@ layers:
   - SPACE
   - LCTRL
   - APP
-  - RALT
+  - adjust
   - DELETE
   - ENTER
   - RIGHT ARROW
@@ -66,7 +66,7 @@ layers:
   - LEFT ARROW
   - DOWN ARROW
   - '&mkp MB4'
-  - '&mkp MB5'
+  - {t: '&mkp MB5', h: adjust}
   - {t: snipe, h: scroll_tap}
   - {t: '&mkp RCLK', h: scroll_tap}
   - '&mkp LCLK'
@@ -451,7 +451,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - '&bootloader'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -462,7 +462,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - '&bootloader'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
