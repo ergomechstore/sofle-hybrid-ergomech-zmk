@@ -21,10 +21,6 @@
         ;
 };
 
-&right_encoder {
-    status = "okay";
-};
- 
 &pro_micro_i2c {
     status = "okay";
 

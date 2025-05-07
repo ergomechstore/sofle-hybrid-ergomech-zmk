@@ -17,7 +17,7 @@ include:
     shield: sofle_ergomech_left
   - board: nice_nano_v2
     shield: sofle_ergomech_right
-  - board: nice_nano_v2
+  - board: seeeduino_xiao_ble
     shield: sofle_ergomech_mouse
   - board: nice_nano_v2
     shield: settings_reset
