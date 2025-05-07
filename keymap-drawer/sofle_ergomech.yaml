@@ -1,10 +1,361 @@
 layout: {zmk_keyboard: sofle_ergomech}
 layers:
-  default: ['`', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '', ESC, Q, W, E, R, T, Y, U, I, O, P, BSPC, TAB, A, S, D, F, G, H, J, K, L, ;, '''', LSHFT, Z,
-    X, C, V, B, N, M, ',', ., /, RSHFT, MUTE, LGUI, LALT, LCTRL, lower, RET, SPACE, raise, RCTRL, RALT, RGUI, ENTER, RIGHT, UP ARROW, LEFT, DOWN, '`', '1', '2', '3',
-    '4', '5']
-  lower:
-  - '&studio_unlock'
+  default:
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  - '5'
+  - '6'
+  - '7'
+  - '8'
+  - '9'
+  - '0'
+  - Ctl+BACKSPACE
+  - BACKSPACE
+  - TAB
+  - Q
+  - W
+  - F
+  - P
+  - G
+  - J
+  - L
+  - U
+  - Y
+  - ;
+  - \
+  - navigation
+  - A
+  - R
+  - S
+  - T
+  - D
+  - H
+  - N
+  - E
+  - I
+  - O
+  - ''''
+  - LSHIFT
+  - Z
+  - X
+  - C
+  - V
+  - B
+  - K
+  - M
+  - ','
+  - .
+  - /
+  - {t: RET, h: RSHFT}
+  - MUTE
+  - LCTRL
+  - adjust
+  - LALT
+  - LGUI
+  - symbol
+  - SPACE
+  - LCTRL
+  - APP
+  - RALT
+  - DELETE
+  - ENTER
+  - RIGHT ARROW
+  - UP ARROW
+  - LEFT ARROW
+  - DOWN ARROW
+  - '&mkp MB4'
+  - '&mkp MB5'
+  - {t: snipe, h: scroll_tap}
+  - {t: '&mkp RCLK', h: scroll_tap}
+  - '&mkp LCLK'
+  - '&mkp MCLK'
+  scroll_tap:
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  - '5'
+  - '6'
+  - '7'
+  - '8'
+  - '9'
+  - '0'
+  - Ctl+BACKSPACE
+  - BACKSPACE
+  - TAB
+  - Q
+  - W
+  - F
+  - P
+  - G
+  - J
+  - L
+  - U
+  - Y
+  - ;
+  - \
+  - navigation
+  - A
+  - R
+  - S
+  - T
+  - D
+  - H
+  - N
+  - E
+  - I
+  - O
+  - ''''
+  - LSHIFT
+  - Z
+  - X
+  - C
+  - V
+  - B
+  - K
+  - M
+  - ','
+  - .
+  - /
+  - {t: RET, h: RSHFT}
+  - MUTE
+  - LCTRL
+  - adjust
+  - LALT
+  - LGUI
+  - symbol
+  - SPACE
+  - LCTRL
+  - APP
+  - RALT
+  - DELETE
+  - ENTER
+  - RIGHT ARROW
+  - UP ARROW
+  - LEFT ARROW
+  - DOWN ARROW
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: scroll_hold, h: toggle, type: held}
+  - {t: ▽, type: trans}
+  - {t: scroll_hold, h: toggle}
+  - {t: ▽, type: trans}
+  scroll_hold:
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  - '5'
+  - '6'
+  - '7'
+  - '8'
+  - '9'
+  - '0'
+  - Ctl+BACKSPACE
+  - BACKSPACE
+  - TAB
+  - Q
+  - W
+  - F
+  - P
+  - G
+  - J
+  - L
+  - U
+  - Y
+  - ;
+  - \
+  - navigation
+  - A
+  - R
+  - S
+  - T
+  - D
+  - H
+  - N
+  - E
+  - I
+  - O
+  - ''''
+  - LSHIFT
+  - Z
+  - X
+  - C
+  - V
+  - B
+  - K
+  - M
+  - ','
+  - .
+  - /
+  - {t: RET, h: RSHFT}
+  - MUTE
+  - LCTRL
+  - adjust
+  - LALT
+  - LGUI
+  - symbol
+  - SPACE
+  - LCTRL
+  - APP
+  - RALT
+  - DELETE
+  - ENTER
+  - RIGHT ARROW
+  - UP ARROW
+  - LEFT ARROW
+  - DOWN ARROW
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: default, h: toggle}
+  - {t: default, h: toggle}
+  - {t: ▽, type: trans}
+  - {t: default, h: toggle}
+  snipe:
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  - '5'
+  - '6'
+  - '7'
+  - '8'
+  - '9'
+  - '0'
+  - Ctl+BACKSPACE
+  - BACKSPACE
+  - TAB
+  - Q
+  - W
+  - F
+  - P
+  - G
+  - J
+  - L
+  - U
+  - Y
+  - ;
+  - \
+  - navigation
+  - A
+  - R
+  - S
+  - T
+  - D
+  - H
+  - N
+  - E
+  - I
+  - O
+  - ''''
+  - LSHIFT
+  - Z
+  - X
+  - C
+  - V
+  - B
+  - K
+  - M
+  - ','
+  - .
+  - /
+  - {t: RET, h: RSHFT}
+  - MUTE
+  - LCTRL
+  - adjust
+  - LALT
+  - LGUI
+  - symbol
+  - SPACE
+  - LCTRL
+  - APP
+  - RALT
+  - DELETE
+  - ENTER
+  - RIGHT ARROW
+  - UP ARROW
+  - LEFT ARROW
+  - DOWN ARROW
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: default, h: toggle}
+  - {t: '&mkp RCLK', h: scroll_tap}
+  - '&mkp LCLK'
+  - {t: '&mkp MCLK', h: scroll_tap}
+  symbol:
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '~'
+  - '`'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '#'
+  - ^
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '%'
+  - '&'
+  - '?'
+  - +
+  - '@'
+  - $
+  - _
+  - '['
+  - ']'
+  - '!'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - /
+  - (
+  - '='
+  - '0'
+  - '{'
+  - '}'
+  - '1'
+  - '*'
+  - )
+  - '-'
+  - ''''
+  - {t: ▽, type: trans}
+  - '6'
+  - '7'
+  - '8'
+  - '9'
+  - '|'
+  - \
+  - '2'
+  - '3'
+  - '4'
+  - '5'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - RET
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - A
+  - END
+  - PAGE UP
+  - HOME
+  - PAGE DOWN
+  - '&mkp MB4'
+  - '&mkp MB5'
+  - {t: snipe, h: scroll_tap}
+  - {t: '&mkp RCLK', h: scroll_tap}
+  - '&mkp LCLK'
+  - '&mkp MCLK'
+  navigation:
   - F1
   - F2
   - F3
@@ -16,109 +367,36 @@ layers:
   - F9
   - F10
   - F11
-  - '`'
-  - '1'
-  - '2'
-  - '3'
-  - '4'
-  - '5'
-  - '6'
-  - '7'
-  - '8'
-  - '9'
-  - '0'
   - F12
-  - {t: ▽, type: trans}
-  - '!'
-  - '@'
-  - '#'
-  - $
-  - '%'
-  - ^
-  - '&'
-  - '*'
-  - (
-  - )
-  - '|'
-  - {t: ▽, type: trans}
-  - '='
-  - '-'
-  - +
-  - '{'
-  - '}'
-  - '['
-  - ']'
-  - ;
-  - ':'
-  - \
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {type: held}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - A
-  - B
-  - C
-  - D
-  - E
-  - '`'
-  - '1'
-  - '2'
-  - '3'
-  - '4'
-  - '5'
-  raise:
-  - BT CLR
-  - {t: BT, h: '0'}
-  - {t: BT, h: '1'}
-  - {t: BT, h: '2'}
-  - {t: BT, h: '3'}
-  - {t: BT, h: '4'}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - INS
   - PSCRN
-  - CMENU
-  - {t: ▽, type: trans}
+  - Ctl+PG UP
+  - Ctl+PG DN
   - {t: ▽, type: trans}
   - PG UP
-  - {t: ▽, type: trans}
+  - Ctl+LEFT ARROW
   - UP
+  - Ctl+RIGHT ARROW
   - {t: ▽, type: trans}
-  - '0'
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {type: held}
   - LALT
-  - LCTRL
+  - GUI
   - LSHFT
-  - {t: ▽, type: trans}
-  - CLCK
+  - LCTRL
+  - ESC
   - PG DN
   - LEFT
   - DOWN
   - RIGHT
-  - DEL
   - BSPC
+  - DEL
   - {t: ▽, type: trans}
-  - UNDO
-  - CUT
-  - COPY
-  - PASTE
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - Ctl+Z
+  - Ctl+X
+  - Ctl+C
+  - Ctl+V
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -130,21 +408,24 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - RET
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - A
-  - B
-  - C
-  - D
-  - E
-  - '`'
-  - '1'
-  - '2'
-  - '3'
-  - '4'
-  - '5'
+  - END
+  - PG UP
+  - HOME
+  - PG DN
+  - '&mkp MB4'
+  - '&mkp MB5'
+  - {t: snipe, h: scroll_tap}
+  - {t: '&mkp RCLK', h: scroll_tap}
+  - '&mkp LCLK'
+  - '&mkp MCLK'
   adjust:
   - BT CLR
   - {t: BT, h: '0'}
@@ -152,64 +433,64 @@ layers:
   - {t: BT, h: '2'}
   - {t: BT, h: '3'}
   - {t: BT, h: '4'}
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - EP TOG
-  - RGB HUD
-  - RGB HUI
-  - RGB SAD
-  - RGB SAI
-  - RGB EFF
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - RGB BRD
-  - RGB BRI
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - RGB TOG
-  - ''
-  - ''
-  - ''
+  - EP OFF
+  - EP TOG
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - PREV
+  - NEXT
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - PP
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {type: held}
-  - ''
-  - ''
-  - {type: held}
-  - ''
-  - ''
-  - ''
-  - A
-  - B
-  - C
-  - D
-  - E
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Ctl+LEFT SHIFT
+  - {t: ▽, type: trans}
+  - Gui+SPACE
   - '`'
   - '1'
   - '2'
