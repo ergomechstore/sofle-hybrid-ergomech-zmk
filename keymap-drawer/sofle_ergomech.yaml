@@ -491,7 +491,7 @@ layers:
   - Ctl+LEFT SHIFT
   - {t: ▽, type: trans}
   - Gui+SPACE
-  - '`'
+  - '&bootloader'
   - '1'
   - '2'
   - '3'
