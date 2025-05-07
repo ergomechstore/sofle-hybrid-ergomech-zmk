@@ -20,7 +20,7 @@
     
         trackball_listener: trackball_listner {
         compatible = "zmk,input-listener";
-        device = <&trackball>;
+        device = <&trackball_split>;
         status = "disabled";
   };
 
