@@ -29,6 +29,10 @@
         , <&pro_micro 10 GPIO_ACTIVE_HIGH>
         ;
 };
+&trackball_listener:{
+        status = "okay";
+}
+
 / {
     left_encoder: encoder_left {
          compatible = "alps,ec11";

@@ -22,7 +22,6 @@
         compatible = "zmk,input-listener";
         device = <&trackball>;
         status = "disabled";
-        input-processors = <&zip_xy_swap_mapper>;
   };
 
      chosen {
