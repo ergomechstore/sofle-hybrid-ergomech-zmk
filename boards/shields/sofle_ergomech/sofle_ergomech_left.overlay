@@ -31,7 +31,7 @@
 };
 &trackball_listener:{
         status = "okay";
-}
+};
 
 / {
     left_encoder: encoder_left {

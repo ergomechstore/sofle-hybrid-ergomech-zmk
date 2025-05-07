@@ -94,4 +94,4 @@
 &trackball_split {
     device = <&trackball>;
     input-processors = <&zip_xy_swap_mapper>;
-}
+};
