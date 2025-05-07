@@ -67,7 +67,7 @@
 &kp TAB     &kp Q      &kp W   &kp F     &kp P     &kp G   &kp J      &kp L            &kp U         &kp Y           &kp SEMI           &kp BSLH
 &mo NAV       &kp A      &kp R   &kp S     &kp T     &kp D   &kp H      &kp N            &kp E         &kp I           &kp O              &kp SQT
 &kp LSHIFT  &kp Z      &kp X   &kp C     &kp V     &kp B   &kp K      &kp M            &kp COMMA     &kp DOT         &kp FSLH           &mt RSHFT RET
-&kp C_MUTE  &kp LCTRL  &mo ADJUST   &kp LALT  &kp LGUI  &mo SYM   &kp SPACE  &kp LCTRL        &kp K_APP     &mo ADJUST        &kp DELETE
+&kp C_MUTE  &tog SCRLH  &mo ADJUST   &kp LALT  &kp LGUI  &mo SYM   &kp SPACE  &kp LCTRL        &kp K_APP     &mo ADJUST        &kp DELETE
                                                            &kp ENTER      &kp RIGHT_ARROW  &kp UP_ARROW  &kp LEFT_ARROW  &kp DOWN_ARROW
 &mkp MB4 &ltm ADJUST MB5 &mto SCRLM SNIPE &lhm SCRLM RCLK &mkp LCLK &mkp MCLK
             >;
@@ -114,7 +114,7 @@
 &kp TAB     &kp Q      &kp W   &kp F     &kp P     &kp G   &kp J      &kp L            &kp U         &kp Y           &kp SEMI           &kp BSLH
 &mo NAV       &kp A      &kp R   &kp S     &kp T     &kp D   &kp H      &kp N            &kp E         &kp I           &kp O              &kp SQT
 &kp LSHIFT  &kp Z      &kp X   &kp C     &kp V     &kp B   &kp K      &kp M            &kp COMMA     &kp DOT         &kp FSLH           &mt RSHFT RET
-&kp C_MUTE  &kp LCTRL  &mo ADJUST   &kp LALT  &kp LGUI  &mo SYM   &kp SPACE  &kp LCTRL        &kp K_APP     &kp RALT        &kp DELETE
+&kp C_MUTE  &to DEFAULT  &mo ADJUST   &kp LALT  &kp LGUI  &mo SYM   &kp SPACE  &kp LCTRL        &kp K_APP     &kp RALT        &kp DELETE
                                                            &kp ENTER      &kp RIGHT_ARROW  &kp UP_ARROW  &kp LEFT_ARROW  &kp DOWN_ARROW
         &trans &trans  &to DEFAULT &to DEFAULT &trans &to DEFAULT
             >;
