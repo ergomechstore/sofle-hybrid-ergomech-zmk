@@ -34,4 +34,5 @@
      kscan0: kscan {
          wakeup-source;
      };
+ 
  };
