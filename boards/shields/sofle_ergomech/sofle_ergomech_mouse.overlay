@@ -12,9 +12,7 @@
 #define DEFAULT 0
 #define SCRLM 1
 #define SCRLH 2
-#define DEVICE 3
-#define BLTH 4
-#define SNIPE 5
+#define SNIPE 3
 
 
 / {
@@ -105,4 +103,12 @@ chosen {
 &trackball_split {
     device = <&trackball>;
     input-processors = <&zip_xy_swap_mapper>;
+    scroll {
+        layers = <SCRLM SCRLH>;
+        input-processors = <&zip_xy_swap_mapper>, <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>, <&zip_xy_scaler 1 10>, <&zip_xy_to_scroll_mapper>;
+    };
+    snipe {
+        layers = <SNIPE>;
+        input-processors = <&zip_xy_swap_mapper>, <&zip_xy_scaler 1 5>;
+    };
 };
