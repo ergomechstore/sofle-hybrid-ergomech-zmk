@@ -35,33 +35,6 @@
 };
 
 
-
-&spi0 {
-    status = "okay";
-    compatible = "nordic,nrf-spim";
-    pinctrl-0 = <&spi0_default>;
-    pinctrl-1 = <&spi0_sleep>;
-    pinctrl-names = "default", "sleep";
-    cs-gpios = <&xiao_d 7 GPIO_ACTIVE_LOW>;
-
-    trackball: trackball@1 {
-        status = "disable";
-        compatible = "pixart,pmw3610";
-        reg = <0>;
-        spi-max-frequency = <2000000>;
-        irq-gpios = <&xiao_d 10 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-        cpi = <900>;
-        evt-type = <INPUT_EV_REL>;
-        x-input-code = <INPUT_REL_X>;
-        y-input-code = <INPUT_REL_Y>;
-    };
-};
-
-&trackball_split {
-    device = <&trackball>;
-    input-processors = <&zip_xy_swap_mapper>;
-};
-
 &pro_micro_i2c {
     status = "okay";
 
