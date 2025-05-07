@@ -8,6 +8,7 @@
 #include <dt-bindings/zmk/input_transform.h>
 #include <input/processors.dtsi>
 #include <dt-bindings/zmk/matrix_transform.h>
+#include "trackmouse.dtsi"
 #define DEFAULT 0
 #define SCRLM 1
 #define SCRLH 2
