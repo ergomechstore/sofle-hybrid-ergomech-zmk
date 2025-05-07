@@ -7,23 +7,6 @@
  #include <dt-bindings/zmk/matrix_transform.h>
 
  / {
-
-    split_inputs {
-        #address-cells = <1>;
-        #size-cells = <0>;
-
-        trackball_split: trackball_split@0 {
-            compatible = "zmk,input-split";
-            reg = <0>;
-        };
-    };
-    
-        trackball_listener: trackball_listner {
-        compatible = "zmk,input-listener";
-        device = <&trackball_split>;
-        status = "disabled";
-  };
-
      chosen {
          zmk,kscan = &kscan0;
          zmk,matrix-transform = &default_transform;
