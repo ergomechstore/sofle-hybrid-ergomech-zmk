@@ -27,7 +27,27 @@
  RC(6,0) RC(6,1) RC(6,2) RC(6,3) RC(6,4) RC(6,5)            
          >;
      };
- 
+     dummy_encoder: dummy_left {
+         compatible = "alps,ec11";
+         a-gpios = <&gpio0 17 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+         b-gpios = <&gpio0 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+         steps = <80>;
+         status = "disabled";
+     };
+
+    left_encoder: encoder_left {
+         compatible = "alps,ec11";
+         a-gpios = <&gpio0 17 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+         b-gpios = <&gpio0 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+         steps = <80>;
+         status = "disabled";
+     };
+
+     sensors: sensors {
+         compatible = "zmk,keymap-sensors";
+         sensors = <&left_encoder &dummy_encoder>;
+         triggers-per-rotation = <40>;
+     };
      kscan0: kscan {
          wakeup-source;
      };
