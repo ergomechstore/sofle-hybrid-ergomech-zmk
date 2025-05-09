@@ -23,14 +23,23 @@
 
     dummy_encoder: dummy_left {
          compatible = "alps,ec11";
-         a-gpios = <&xiao_d 1 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-         b-gpios = <&xiao_d 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+         a-gpios = <&gpio0 17 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+         b-gpios = <&gpio0 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
          steps = <80>;
          status = "okay";
      };
+
+    left_encoder: encoder_left {
+         compatible = "alps,ec11";
+         a-gpios = <&gpio0 17 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+         b-gpios = <&gpio0 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+         steps = <80>;
+         status = "disabled";
+     };
+
      sensors: sensors {
          compatible = "zmk,keymap-sensors";
-         sensors = <&dummy_encoder>;
+         sensors = <&left_encoder &dummy_encoder>;
          triggers-per-rotation = <40>;
      };
 };
