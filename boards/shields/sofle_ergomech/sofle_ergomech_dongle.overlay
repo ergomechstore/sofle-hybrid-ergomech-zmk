@@ -20,7 +20,16 @@
         rows = <0>;
         events = <0>;
     };
-};  \
+};
+
+&uart0 {
+    status = "disabled";
+};
+
+&xiao_serial {
+    status = "disabled";
+};
+
 &trackball_listener{
         status = "okay";
 };
