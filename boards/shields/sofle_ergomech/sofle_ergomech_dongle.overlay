@@ -11,7 +11,7 @@
 / {
     chosen {
         zmk,kscan = &mock_kscan;
-        zmk,physical-layout = &physical_layout0;  // New item added
+        zmk,matrix-transform = &default_transform;
     };
 
     mock_kscan: mock_kscan_0 {
