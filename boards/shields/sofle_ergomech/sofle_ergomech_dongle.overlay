@@ -20,6 +20,19 @@
         rows = <0>;
         events = <0>;
     };
+
+    dummy_encoder: dummy_left {
+         compatible = "alps,ec11";
+         a-gpios = <&xiao_d 1 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+         b-gpios = <&xiao_d 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+         steps = <80>;
+         status = "okay";
+     };
+     sensors: sensors {
+         compatible = "zmk,keymap-sensors";
+         sensors = <&dummy_encoder>;
+         triggers-per-rotation = <40>;
+     };
 };
 
 &uart0 {
