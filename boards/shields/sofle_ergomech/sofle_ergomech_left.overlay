@@ -5,7 +5,6 @@
  */
 
 #include "sofle_ergomech.dtsi"
-#include "trackmouse.dtsi"
 
 &kscan0 {
          compatible = "zmk,kscan-gpio-matrix";
@@ -30,10 +29,6 @@
         , <&pro_micro 10 GPIO_ACTIVE_HIGH>
         ;
 };
-&trackball_listener{
-        status = "okay";
-};
-
 / {
     chosen {
         zephyr,display = &oled;

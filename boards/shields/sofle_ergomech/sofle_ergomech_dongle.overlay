@@ -6,6 +6,7 @@
  
 
 #include <dt-bindings/zmk/matrix_transform.h>
+#include "trackmouse.dtsi"
 
 / {
     chosen {
@@ -45,6 +46,9 @@
         display-name = "Default Layout";
         transform = <&default_transform>;
     }; 
- 
-
 }; 
+
+&trackball_listener{
+        status = "okay";
+};
+
