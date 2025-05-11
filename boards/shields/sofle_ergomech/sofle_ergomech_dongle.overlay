@@ -27,11 +27,11 @@
 };
 
 &uart0 {
-    status = "disabled";
+    status = "okay";
 };
 
 &xiao_serial {
-    status = "disabled";
+    status = "okay";
 };
 
 &trackball_listener{
