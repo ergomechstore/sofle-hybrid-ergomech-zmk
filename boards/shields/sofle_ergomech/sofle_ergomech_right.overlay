@@ -5,7 +5,7 @@
  */
 
 #include "sofle_ergomech.dtsi"
-
+#include "sofle_ergomech-layouts.dtsi"
 / {
 chosen {
         zephyr,display = &oled;

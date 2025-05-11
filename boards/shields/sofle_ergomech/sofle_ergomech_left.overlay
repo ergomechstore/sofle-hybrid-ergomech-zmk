@@ -5,7 +5,7 @@
  */
 
 #include "sofle_ergomech.dtsi"
-#include "sofle_ergomech-layout.dtsi"
+#include "sofle_ergomech-layouts.dtsi"
 &kscan0 {
          compatible = "zmk,kscan-gpio-matrix";
  

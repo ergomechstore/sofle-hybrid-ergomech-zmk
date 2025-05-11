@@ -9,6 +9,8 @@
 #include <input/processors.dtsi>
 #include <dt-bindings/zmk/matrix_transform.h>
 #include "trackmouse.dtsi"
+#include "sofle_ergomech-layouts.dtsi"
+
 #define DEFAULT 0
 #define SCRLM 1
 #define SCRLH 2
@@ -18,7 +20,7 @@
 / {
 chosen {
         zmk,kscan = &kscan0;
-        zmk,matrix-transform = &default_transform;
+        zmk,physical-layout = &layout_0;
         };
 };
 
