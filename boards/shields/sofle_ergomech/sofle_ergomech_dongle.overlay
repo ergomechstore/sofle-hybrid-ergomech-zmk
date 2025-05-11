@@ -14,7 +14,7 @@
         zmk,physical-layout = &layout_0;
     };
 
-    mock_kscan: mock_kscan_0 {
+    mock_kscan: kscan_0 {
         compatible = "zmk,kscan-mock";
         columns = <0>;
         rows = <0>;
