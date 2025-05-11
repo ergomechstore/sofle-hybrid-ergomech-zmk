@@ -1,9 +1,6 @@
 #include <physical_layouts.dtsi>
 
 / {
-#include <physical_layouts.dtsi>
-
-/ {
     physical_layout0: physical_layout_0 {
         compatible = "zmk,physical-layout";
         display-name = "LAYOUT";
@@ -84,7 +81,6 @@
             , <&key_physical_attrs 100 100  425  730       0     0     0>
             ;
     };
-};
 
         position_map {
         compatible = "zmk,physical-layout-position-map";
