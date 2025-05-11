@@ -5,7 +5,7 @@
  */
 
  #include <dt-bindings/zmk/matrix_transform.h>
- #include "sofle_ergomech-layout.dtsi"
+ #include "sofle_ergomech-layouts.dtsi"
 
  / {
          default_transform: keymap_transform_0 {
