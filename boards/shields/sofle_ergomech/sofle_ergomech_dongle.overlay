@@ -7,11 +7,11 @@
 
 #include "sofle_ergomech.dtsi"
 #include "trackmouse.dtsi"
-
+#include "sofle_ergomech-layout.dtsi"
 / {
     chosen {
         zmk,kscan = &mock_kscan;
-        zmk,matrix-transform = &default_transform;
+        zmk,physical-layout = &layout_0;
     };
 
     mock_kscan: mock_kscan_0 {

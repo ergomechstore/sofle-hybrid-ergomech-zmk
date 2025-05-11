@@ -1,11 +1,16 @@
 #include <physical_layouts.dtsi>
 
 / {
-    layout_0: layout_0 {
+#include <physical_layouts.dtsi>
+
+/ {
+    physical_layout0: physical_layout_0 {
         compatible = "zmk,physical-layout";
         display-name = "LAYOUT";
-        transform = <&default_transform>;
-        
+
+        kscan = <&kscan0>;
+        transform = <&matrix_transform0>;
+
         keys  //                     w   h    x    y     rot    rx    ry
             = <&key_physical_attrs 100 100    0   30       0     0     0>
             , <&key_physical_attrs 100 100  100   30       0     0     0>
@@ -71,10 +76,17 @@
             , <&key_physical_attrs 100 100 1125  530       0     0     0>
             , <&key_physical_attrs 100 100 1025  630       0     0     0>
             , <&key_physical_attrs 100 100 1125  730       0     0     0>
+            , <&key_physical_attrs 100 100  125  630       0     0     0>
+            , <&key_physical_attrs 100 100  225  630       0     0     0>
+            , <&key_physical_attrs 100 100  325  630       0     0     0>
+            , <&key_physical_attrs 100 100  425  630       0     0     0>
+            , <&key_physical_attrs 100 100  125  730       0     0     0>
+            , <&key_physical_attrs 100 100  425  730       0     0     0>
             ;
     };
+};
 
-    position_map {
+        position_map {
         compatible = "zmk,physical-layout-position-map";
 
         layout_0 {

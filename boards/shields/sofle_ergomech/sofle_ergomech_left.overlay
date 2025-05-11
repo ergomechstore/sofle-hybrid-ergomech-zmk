@@ -5,7 +5,7 @@
  */
 
 #include "sofle_ergomech.dtsi"
-
+#include "sofle_ergomech-layout.dtsi"
 &kscan0 {
          compatible = "zmk,kscan-gpio-matrix";
  
@@ -33,7 +33,7 @@
     chosen {
         zephyr,display = &oled;
         zmk,kscan = &kscan0;
-        zmk,matrix-transform = &default_transform;
+        zmk,physical-layout = &layout_0;
         };
 };
 

@@ -161,7 +161,7 @@
 
             bindings = <
 &trans  &trans     &trans    &kp TILDE  &kp GRAVE  &trans    &trans         &kp HASH   &kp CARET    &trans    &trans         &trans
-&trans  &kp PRCNT  &kp AMPS  &kp QMARK  &kp PLUS   &kp AT    &kp DLLR       &kp UNDER  &kp LBKT     &kp RBKT  &kp EXCL       &trans
+&studio_unlock  &kp PRCNT  &kp AMPS  &kp QMARK  &kp PLUS   &kp AT    &kp DLLR       &kp UNDER  &kp LBKT     &kp RBKT  &kp EXCL       &trans
 &trans  &kp FSLH   &kp LPAR  &kp EQUAL  &kp N0     &kp LBRC  &kp RBRC       &kp N1     &kp STAR     &kp RPAR  &kp MINUS      &kp SQT
 &trans  &kp N6     &kp N7    &kp N8     &kp N9     &kp PIPE  &kp BACKSLASH  &kp N2     &kp N3       &kp N4    &kp N5         &trans
 &trans  &trans     &trans    &trans     &trans     &trans    &kp RET        &trans     &trans       &trans    &trans
