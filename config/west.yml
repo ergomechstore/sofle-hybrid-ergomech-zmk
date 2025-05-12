@@ -6,6 +6,8 @@ manifest:
       url-base: https://github.com/badjeff
     - name: cyboard
       url-base: https://github.com/Cyboard-DigitalTailor
+    - name: carrefinho                            # <--- add this
+      url-base: https://github.com/carrefinho     # <--- and this
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -14,5 +16,8 @@ manifest:
     - name: zmk-pmw3610-driver
       remote: cyboard
       revision: startup_optimization
+    - name: prospector-zmk-module                 # <--- and these
+      remote: carrefinho                          # <---
+      revision: main                              # <---
   self:
     path: config
