@@ -1,5 +1,6 @@
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 1200  // 600
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 25   // 10
+#define ZMK_MOUSE_SCRL_VAL 140
 
 #include <input/processors.dtsi>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
@@ -89,62 +90,69 @@
 
         esc {
             bindings = <&kp ESCAPE>;
-            key-positions = <13 14>;
+            key-positions = <12 13>;
         };
 
         left_bkt {
             bindings = <&kp LEFT_BRACKET>;
-            key-positions = <17 16>;
+            key-positions = <15 16>;
         };
 
         right_bkt {
             bindings = <&kp RIGHT_BRACKET>;
-            key-positions = <21 22>;
+            key-positions = <19 20>;
         };
 
         left_par {
             bindings = <&kp LEFT_PARENTHESIS>;
-            key-positions = <29 30>;
+            key-positions = <27 28>;
         };
 
         right_par {
             bindings = <&kp RIGHT_PARENTHESIS>;
-            key-positions = <34 35>;
+            key-positions = <31 32>;
         };
 
         left_brace {
             bindings = <&kp LEFT_BRACE>;
-            key-positions = <42 43>;
+            key-positions = <39 40>;
         };
 
         right_brace {
             bindings = <&kp RIGHT_BRACE>;
-            key-positions = <47 48>;
+            key-positions = <43 44>;
         };
 
         bac {
             bindings = <&kp BACKSLASH>;
-            key-positions = <18 20>;
+            key-positions = <17 18>;
         };
 
         pipe {
             bindings = <&kp PIPE>;
-            key-positions = <31 33>;
+            key-positions = <29 30>;
         };
     };
-
 #define BASE 0
 #define LOWER 1
 #define RAISE 2
 #define ADJUST 3
 
-   // Activate ADJUST layer by pressing raise and lower
+    // Activate ADJUST layer by pressing raise and lower
+
     conditional_layers {
         compatible = "zmk,conditional-layers";
+
         adjust_layer {
             if-layers = <LOWER RAISE>;
             then-layer = <ADJUST>;
         };
+    };
+    scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
+        compatible = "zmk,behavior-sensor-rotate";
+        #sensor-binding-cells = <0>;
+        tap-ms = <500>;
+        bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
     };
 
     keymap {
