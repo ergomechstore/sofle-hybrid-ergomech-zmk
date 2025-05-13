@@ -196,7 +196,7 @@
                                                                       &kp A      &kp B  &kp C &kp D  &kp E
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&scroll_up_down &inc_dec_kp PG_UP PG_DN>;
         };
 
         raise_layer {
@@ -235,6 +235,7 @@
                     &rgb_ug RGB_TOG              &none           &none           &none           &none            &none           &none  &none &none &none &none
                                                                                                                     &kp A      &kp B  &kp C &kp D  &kp E
             >;
+            sensor-bindings = <&rgb_encoder &inc_dec_kp PG_UP PG_DN>;
         };
 
     };
