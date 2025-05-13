@@ -1,5 +1,6 @@
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 1200  // 600
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 25   // 10
+#define ZMK_MOUSE_SCRL_VAL 140
 
 #include <input/processors.dtsi>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
@@ -147,7 +148,12 @@
             then-layer = <ADJUST>;
         };
     };
-
+    scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
+        compatible = "zmk,behavior-sensor-rotate";
+        #sensor-binding-cells = <0>;
+        tap-ms = <20>;
+        bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
+    };
     keymap {
         compatible = "zmk,keymap";
 
@@ -193,7 +199,7 @@
                                                                 &kp A      &kp B     &kp C      &kp D      &kp E
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&scroll_up_down &inc_dec_kp PG_UP PG_DN>;
         };
 
         raise_layer {
