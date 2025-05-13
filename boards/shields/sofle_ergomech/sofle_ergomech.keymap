@@ -169,7 +169,7 @@
                                                                    &kp A      &kp B  &kp C &kp D  &kp E
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&scroll_encoder &inc_dec_kp PG_UP PG_DN>;
         };
 
         lower_layer {
