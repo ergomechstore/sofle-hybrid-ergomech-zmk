@@ -95,12 +95,12 @@
 
         left_bkt {
             bindings = <&kp LEFT_BRACKET>;
-            key-positions = <17 16>;
+            key-positions = <15 16>;
         };
 
         right_bkt {
             bindings = <&kp RIGHT_BRACKET>;
-            key-positions = <21 22>;
+            key-positions = <18 19>;
         };
 
         left_par {
