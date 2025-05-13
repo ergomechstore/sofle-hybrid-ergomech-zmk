@@ -137,7 +137,6 @@
 #define RAISE 2
 #define ADJUST 3
 
-/ {
     // Activate ADJUST layer by pressing raise and lower
 
     conditional_layers {
