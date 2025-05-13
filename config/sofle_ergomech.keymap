@@ -151,7 +151,7 @@
     scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
         compatible = "zmk,behavior-sensor-rotate";
         #sensor-binding-cells = <0>;
-        tap-ms = <20>;
+        tap-ms = <500>;
         bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
     };
     keymap {
