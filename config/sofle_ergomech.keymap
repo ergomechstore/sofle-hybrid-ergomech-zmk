@@ -90,7 +90,7 @@
 
         esc {
             bindings = <&kp ESCAPE>;
-            key-positions = <13 14>;
+            key-positions = <12 13>;
         };
 
         left_bkt {
@@ -100,37 +100,37 @@
 
         right_bkt {
             bindings = <&kp RIGHT_BRACKET>;
-            key-positions = <18 19>;
+            key-positions = <19 20>;
         };
 
         left_par {
             bindings = <&kp LEFT_PARENTHESIS>;
-            key-positions = <29 30>;
+            key-positions = <27 28>;
         };
 
         right_par {
             bindings = <&kp RIGHT_PARENTHESIS>;
-            key-positions = <34 35>;
+            key-positions = <31 32>;
         };
 
         left_brace {
             bindings = <&kp LEFT_BRACE>;
-            key-positions = <42 43>;
+            key-positions = <39 40>;
         };
 
         right_brace {
             bindings = <&kp RIGHT_BRACE>;
-            key-positions = <47 48>;
+            key-positions = <43 44>;
         };
 
         bac {
             bindings = <&kp BACKSLASH>;
-            key-positions = <18 20>;
+            key-positions = <17 18>;
         };
 
         pipe {
             bindings = <&kp PIPE>;
-            key-positions = <31 33>;
+            key-positions = <29 30>;
         };
     };
 #define BASE 0
