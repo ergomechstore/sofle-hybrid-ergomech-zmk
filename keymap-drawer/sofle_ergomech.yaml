@@ -32,23 +32,23 @@ layers:
   - '~'
   - '@'
   - '#'
-  - $
+  - DLR
   - '&mkp MB5'
   - PG DN
   - LEFT
   - DOWN
   - RIGHT
-  - '['
-  - ']'
+  - '{'
+  - '}'
   - {t: ▽, type: trans}
   - '='
   - '-'
   - +
   - '{'
   - '}'
-  - '['
-  - ']'
-  - INSER
+  - '{'
+  - '}'
+  - INS
   - ':'
   - \
   - {t: ▽, type: trans}
