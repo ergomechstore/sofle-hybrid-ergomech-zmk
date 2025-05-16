@@ -1,6 +1,6 @@
 layout: {zmk_keyboard: sofle_ergomech}
 layers:
-  default: [ESC, '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', BSPC, ESC, Q, W, E, R, T, Y, U, I, O, P, \, TAB, A, S, D, F, G, H, J, K, L, ;, '''', LSHFT, Z,
+  default: [ESC, '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', BSPC, TAB, Q, W, E, R, T, Y, U, I, O, P, \, '`', A, S, D, F, G, H, J, K, L, ;, '''', LSHFT, Z,
     X, C, V, B, N, M, ',', ., /, RSHFT, '&studio_unlock', LCTRL, LGUI, LALT, lower, SPACE, ENTER, raise, RCTRL, RALT, DELETE, ENTER, RIGHT ARROW, UP ARROW, LEFT ARROW,
     DOWN ARROW]
   lower:
@@ -16,7 +16,7 @@ layers:
   - F9
   - F10
   - {t: ▽, type: trans}
-  - '`'
+  - CAPS
   - '1'
   - '&mkp LCLK'
   - '&mkp MCLK'
