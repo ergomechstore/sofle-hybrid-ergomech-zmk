@@ -18,10 +18,10 @@ layers:
   - {t: ▽, type: trans}
   - '`'
   - '1'
-  - '2'
-  - '3'
-  - '4'
-  - '5'
+  - '&mkp LCLK'
+  - '&mkp MCLK'
+  - '&mkp RCLK'
+  - '&mkp MB4'
   - PG UP
   - END
   - UP
