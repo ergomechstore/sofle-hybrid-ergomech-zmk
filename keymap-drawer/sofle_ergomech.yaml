@@ -15,7 +15,7 @@ layers:
   - F8
   - F9
   - F10
-  - F11
+  - trans
   - '`'
   - '1'
   - '2'
@@ -63,11 +63,11 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - A
-  - B
-  - C
-  - D
-  - E
+  - ENTER
+  - RIGHT ARROW
+  - UP ARROW
+  - LEFT ARROW
+  - DOWN ARROW
   raise:
   - BT CLR
   - {t: BT, h: '0'}
