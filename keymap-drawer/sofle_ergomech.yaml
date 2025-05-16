@@ -21,7 +21,7 @@ layers:
   - '&mkp LCLK'
   - '&mkp MCLK'
   - '&mkp RCLK'
-  - '&mkp BTN4'
+  - '&mkp BTN_BACK'
   - PG UP
   - END
   - UP
