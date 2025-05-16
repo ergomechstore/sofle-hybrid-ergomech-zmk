@@ -186,12 +186,12 @@
 // |       |  =  |  -  |  +   |  {   |  }   |        |  |       |  [   |  ]    |  ;    |  :   |   \   |       |
 //               |     |      |      |      |        |  |       |      |       |       |      |
             bindings = <
-&kp GRAVE    &kp F1    &kp F2    &kp F3      &kp F4    &kp F5                    &kp F6    &kp F7   &kp F8          &kp F9    &kp F10   &trans
-&trans       &kp GRAVE &mkp LCLK &mkp MCLK   &mkp RCLK &mkp MB4                  &kp PG_UP &kp END  &kp UP          &kp HOME  &kp MINUS &kp EQUAL
-&trans       &kp TILDE &kp AT    &kp HASH    &kp DLLR  &mkp MB5                  &kp PG_DN &kp LEFT &kp DOWN        &kp RIGHT &kp LBKT  &kp RBKT
-&trans       &kp EQUAL &kp MINUS &kp PLUS &kp LBRC  &kp RBRC                     &kp LBKT  &kp RBKT &kp INSER       &kp COLON &kp BSLH  &trans                                                    
-             &kp C_MUTE    &trans    &trans      &trans    &trans     &trans &trans  &trans    &trans   &trans          &trans
-                                                                      &mkp LCLK  &mmv MOVE_RIGHT   &mmv MOVE_UP &mmv MOVE_LEFT  &mmv MOVE_DOWN
+&kp GRAVE  &kp F1    &kp F2    &kp F3   &kp F4   &kp F5              &kp F6     &kp F7    &kp F8     &kp F9     &kp F10   &trans
+&trans     &kp GRAVE &mkp LCLK &mkp MCLK &mkp RCLK &mkp MB4          &kp PG_UP  &kp END   &kp UP     &kp HOME   &kp MINUS &kp EQUAL
+&trans     &kp TILDE &kp AT    &kp HASH &kp DLR   &mkp MB5           &kp PG_DN  &kp LEFT  &kp DOWN   &kp RIGHT  &kp LBRC  &kp RBRC
+&trans     &kp EQUAL &kp MINUS &kp PLUS &kp LBRC  &kp RBRC           &kp LBRC   &kp RBRC  &kp INS    &kp COLON  &kp BSLH  &trans
+           &kp MUTE  &trans    &trans   &trans    &trans   &trans    &trans     &trans    &trans     &trans     &trans
+                                            &mkp LCLK &mmv MOVE_RIGHT &mmv MOVE_UP &mmv MOVE_LEFT &mmv MOVE_DOWN
             >;
 
             sensor-bindings = <&scroll_up_down &inc_dec_kp PG_UP PG_DN>;
