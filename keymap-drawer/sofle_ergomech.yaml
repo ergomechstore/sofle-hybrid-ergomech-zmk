@@ -15,7 +15,7 @@ layers:
   - F8
   - F9
   - F10
-  - trans
+  - {t: ▽, type: trans}
   - '`'
   - '1'
   - '2'
