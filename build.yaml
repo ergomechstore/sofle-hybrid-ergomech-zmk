@@ -28,5 +28,3 @@ include:
     shield: settings_reset
   - board: seeeduino_xiao_ble
     shield: sofle_ergomech_dongle prospector_adapter
-    snippet: studio-rpc-usb-uart
-    cmake-args: -DCONFIG_ZMK_STUDIO=y
