@@ -27,5 +27,5 @@ include:
   - board: seeeduino_xiao_ble
     shield: settings_reset
   - board: seeeduino_xiao_ble
-    shield: sofle_ergomech_dongle 
+    shield: sofle_ergomech_dongle prospector_adapter
     snippet: zmk-usb-logging
