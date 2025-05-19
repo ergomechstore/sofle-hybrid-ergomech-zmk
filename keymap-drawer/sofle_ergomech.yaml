@@ -1,9 +1,10 @@
 layout: {zmk_keyboard: sofle_ergomech}
 layers:
-  default: ['`', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '', ESC, Q, W, E, R, T, Y, U, I, O, P, BSPC, TAB, A, S, D, F, G, H, J, K, L, ;, '''', LSHFT, Z,
-    X, C, V, B, N, M, ',', ., /, RSHFT, MUTE, LGUI, LALT, LCTRL, lower, RET, SPACE, raise, RCTRL, RALT, RGUI, ENTER, RIGHT, UP ARROW, LEFT, DOWN]
+  default: [ESC, '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', BSPC, TAB, Q, W, E, R, T, Y, U, I, O, P, \, '`', A, S, D, F, G, H, J, K, L, ;, '''', LSHFT, Z,
+    X, C, V, B, N, M, ',', ., /, RSHFT, '&studio_unlock', LCTRL, LGUI, LALT, lower, SPACE, ENTER, raise, RCTRL, RALT, DELETE, ENTER, RIGHT ARROW, UP ARROW, LEFT ARROW,
+    DOWN ARROW]
   lower:
-  - '&studio_unlock'
+  - {t: ▽, type: trans}
   - F1
   - F2
   - F3
@@ -14,31 +15,31 @@ layers:
   - F8
   - F9
   - F10
-  - F11
-  - '`'
+  - {t: ▽, type: trans}
+  - CAPS
   - '1'
-  - '2'
-  - '3'
-  - '4'
-  - '5'
-  - '6'
-  - '7'
-  - '8'
-  - '9'
-  - '0'
-  - F12
+  - '&mkp LCLK'
+  - '&mkp MCLK'
+  - '&mkp RCLK'
+  - '&mkp MB4'
+  - PG UP
+  - END
+  - UP
+  - HOME
+  - '-'
+  - '='
   - {t: ▽, type: trans}
   - '!'
   - '@'
   - '#'
   - $
   - '%'
-  - ^
-  - '&'
-  - '*'
-  - (
-  - )
-  - '|'
+  - PG DN
+  - LEFT
+  - DOWN
+  - RIGHT
+  - '['
+  - ']'
   - {t: ▽, type: trans}
   - '='
   - '-'
@@ -51,7 +52,7 @@ layers:
   - ':'
   - \
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - MUTE
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -62,11 +63,11 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - A
-  - B
-  - C
-  - D
-  - E
+  - '&mkp LCLK'
+  - '&mmv MOVE_RIGHT'
+  - '&mmv MOVE_UP'
+  - '&mmv MOVE_LEFT'
+  - '&mmv MOVE_DOWN'
   raise:
   - BT CLR
   - {t: BT, h: '0'}
@@ -198,21 +199,21 @@ layers:
   - D
   - E
 combos:
-- p: [13, 14]
+- p: [12, 13]
   k: ESCAPE
-- p: [17, 16]
+- p: [15, 16]
   k: '['
-- p: [21, 22]
+- p: [19, 20]
   k: ']'
-- p: [29, 30]
+- p: [27, 28]
   k: (
-- p: [34, 35]
+- p: [31, 32]
   k: )
-- p: [42, 43]
+- p: [39, 40]
   k: '{'
-- p: [47, 48]
+- p: [43, 44]
   k: '}'
-- p: [18, 20]
+- p: [17, 18]
   k: \
-- p: [31, 33]
+- p: [29, 30]
   k: '|'
