@@ -1,5 +1,6 @@
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 1200  // 600
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 25   // 10
+#define ZMK_MOUSE_SCRL_VAL 140
 
 #include <input/processors.dtsi>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
@@ -333,62 +334,69 @@
 
         esc {
             bindings = <&kp ESCAPE>;
-            key-positions = <13 14>;
+            key-positions = <12 13>;
         };
 
         left_bkt {
             bindings = <&kp LEFT_BRACKET>;
-            key-positions = <17 16>;
+            key-positions = <15 16>;
         };
 
         right_bkt {
             bindings = <&kp RIGHT_BRACKET>;
-            key-positions = <21 22>;
+            key-positions = <19 20>;
         };
 
         left_par {
             bindings = <&kp LEFT_PARENTHESIS>;
-            key-positions = <29 30>;
+            key-positions = <27 28>;
         };
 
         right_par {
             bindings = <&kp RIGHT_PARENTHESIS>;
-            key-positions = <34 35>;
+            key-positions = <31 32>;
         };
 
         left_brace {
             bindings = <&kp LEFT_BRACE>;
-            key-positions = <42 43>;
+            key-positions = <39 40>;
         };
 
         right_brace {
             bindings = <&kp RIGHT_BRACE>;
-            key-positions = <47 48>;
+            key-positions = <43 44>;
         };
 
         bac {
             bindings = <&kp BACKSLASH>;
-            key-positions = <18 20>;
+            key-positions = <17 18>;
         };
 
         pipe {
             bindings = <&kp PIPE>;
-            key-positions = <31 33>;
+            key-positions = <29 30>;
         };
     };
-
 #define BASE 0
 #define LOWER 1
 #define RAISE 2
 #define ADJUST 3
 
-   // Activate ADJUST layer by pressing raise and lower
+    // Activate ADJUST layer by pressing raise and lower
+
     conditional_layers {
         compatible = "zmk,conditional-layers";
+
         adjust_layer {
             if-layers = <LOWER RAISE>;
             then-layer = <ADJUST>;
         };
+    };
+    scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
+        compatible = "zmk,behavior-sensor-rotate";
+        #sensor-binding-cells = <0>;
+        tap-ms = <500>;
+        bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
     };
 
     keymap {
@@ -403,12 +411,12 @@
 // | SHIFT |  Z  |  X  |  C   |  V   |  B   |  MUTE  |  |       |  N   |  M    |  ,    |  .   |   /   | SHIFT |
 //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
             bindings = <
-&kp GRAVE &kp N1 &kp N2   &kp N3   &kp N4    &kp N5                           &kp N6 &kp N7    &kp N8    &kp N9   &kp N0   &none
-&kp ESC   &kp Q  &kp W    &kp E    &kp R     &kp T                            &kp Y  &kp U     &kp I     &kp O    &kp P    &kp BSPC
-&kp TAB   &kp A  &kp S    &kp D    &kp F     &kp G                            &kp H  &kp J     &kp K     &kp L    &kp SEMI &kp SQT
+&kp ESC   &kp N1 &kp N2   &kp N3   &kp N4    &kp N5                           &kp N6 &kp N7    &kp N8    &kp N9   &kp N0   &kp BSPC
+&kp ESC   &kp Q  &kp W    &kp E    &kp R     &kp T                            &kp Y  &kp U     &kp I     &kp O    &kp P    &kp BSLH
+&kp TAB   &kp A  &kp S    &kp D    &kp F     &kp G                            &kp H  &kp J     &kp K     &kp L    &kp SEMI &kp APOS
 &kp LSHFT &kp Z  &kp X    &kp C    &kp V     &kp B                            &kp N  &kp M     &kp COMMA &kp DOT  &kp FSLH &kp RSHFT
-             &studio_unlock  &kp LGUI &kp LALT &kp LCTRL &mo LOWER  &kp RET    &kp SPACE  &mo RAISE  &kp RCTRL &kp RALT  &kp RGUI
-                                                                   &kp A      &kp B  &kp C &kp D  &kp E
+             &studio_unlock  &kp LCTRL &kp LGUI &kp LALT &mo LOWER  &kp SPACE &kp ENTER &mo RAISE &kp RCTRL &kp RALT &kp DELETE
+                                                                   &kp ENTER  &kp RIGHT_ARROW  &kp UP_ARROW &kp LEFT_ARROW  &kp DOWN_ARROW
             >;
 
             sensor-bindings = <&scroll_encoder &inc_dec_kp PG_UP PG_DN>;
@@ -424,15 +432,15 @@
 // |       |  =  |  -  |  +   |  {   |  }   |        |  |       |  [   |  ]    |  ;    |  :   |   \   |       |
 //               |     |      |      |      |        |  |       |      |       |       |      |
             bindings = <
-&trans    &kp F1    &kp F2    &kp F3      &kp F4    &kp F5                    &kp F6    &kp F7   &kp F8          &kp F9    &kp F10   &kp F11
-&kp GRAVE &kp N1    &kp N2    &kp N3      &kp N4    &kp N5                    &kp N6    &kp N7   &kp N8          &kp N9    &kp N0    &kp F12
-&trans    &kp EXCL  &kp AT    &kp HASH    &kp DLLR  &kp PRCNT                 &kp CARET &kp AMPS &kp ASTRK &kp LPAR  &kp RPAR  &kp PIPE
+&trans    &kp F1    &kp F2    &kp F3      &kp F4    &kp F5                    &kp F6    &kp F7   &kp F8          &kp F9    &kp F10   &trans
+&kp GRAVE &kp N1    &mkp LCLK &mkp MCLK   &mkp RCLK &mkp MB4                  &kp PG_UP &kp END  &kp UP          &kp HOME  &kp MINUS &kp EQUAL
+&trans    &kp EXCL  &kp AT    &kp HASH    &kp DLLR  &kp PRCNT                 &kp PG_DN        &kp LEFT         &kp DOWN    &kp RIGHT  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
 &trans    &kp EQUAL &kp MINUS &kp PLUS &kp LBRC  &kp RBRC                     &kp LBKT  &kp RBKT &kp SEMI        &kp COLON &kp BSLH  &trans                                                    
-            &trans        &trans    &trans      &trans    &trans     &trans &trans  &trans    &trans   &trans          &trans
-                                                                      &kp A      &kp B  &kp C &kp D  &kp E
+            &kp C_MUTE        &trans    &trans      &trans    &trans     &trans &trans  &trans    &trans   &trans          &trans
+                                                                      &mkp LCLK  &mmv MOVE_RIGHT  &mmv MOVE_UP &mmv MOVE_LEFT  &mmv MOVE_DOWN
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&scroll_up_down &inc_dec_kp PG_UP PG_DN>;
         };
 
         raise_layer {
@@ -471,6 +479,7 @@
                     &rgb_ug RGB_TOG              &none           &none           &none           &none            &none           &none  &none &none &none &none
                                                                                                                     &kp A      &kp B  &kp C &kp D  &kp E
             >;
+            sensor-bindings = <&rgb_encoder &inc_dec_kp PG_UP PG_DN>;
         };
 
     };
