@@ -15,7 +15,7 @@ manifest:
       remote: Crimsonmars
       revision: main
       # hammerbean repo for nice oled
-      - name: hammerbeam-slideshow
+    - name: hammerbeam-slideshow
       remote: Crimsonmars
       revision: main
   self:
