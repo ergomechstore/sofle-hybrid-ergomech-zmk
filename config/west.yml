@@ -14,5 +14,9 @@ manifest:
     - name: zmk-nice-oled
       remote: Crimsonmars
       revision: main
+      # hammerbean repo for nice oled
+    - name: hammerbeam-slideshow
+      remote: Crimsonmars
+      revision: main
   self:
     path: config
