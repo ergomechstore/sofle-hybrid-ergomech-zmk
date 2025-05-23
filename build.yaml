@@ -27,5 +27,7 @@ include:
   - board: seeeduino_xiao_ble
     shield: settings_reset
   - board: seeeduino_xiao_ble
-    shield: sofle_ergomech_dongle prospector_adapter
+    shield: sofle_ergomech_dongle 
     snippet: zmk-usb-logging
+    snippet: studio-rpc-usb-uart
+    cmake-args: -DCONFIG_ZMK_STUDIO=y
