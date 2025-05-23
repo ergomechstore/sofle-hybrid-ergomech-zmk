@@ -75,7 +75,7 @@
             >;
 
             sensor-bindings =
-                <&inc_dec_kp UP_ARROW DOWN>,
+                <&inc_dec_kp DOWN_ARROW UP>,
                 <&inc_dec_kp PG_UP PG_DN>;
         };
 
