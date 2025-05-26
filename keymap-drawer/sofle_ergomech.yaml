@@ -57,7 +57,7 @@ layers:
   - symbol
   - SPACE
   - LCTRL
-  - '&caps_word'
+  - KP APP
   - adjust
   - DELETE
   - ENTER
