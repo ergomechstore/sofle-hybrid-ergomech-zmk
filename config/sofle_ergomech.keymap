@@ -20,6 +20,9 @@
 #define SYM 4
 #define NAV 5
 #define ADJUST 6
+&caps_word {
+    continue-list = <UNDERSCORE MINUS>;
+};
 / {
     // Activate ADJUST layer by pressing raise and lower
 
@@ -67,7 +70,7 @@
 &kp TAB     &kp Q      &kp W   &kp F     &kp P     &kp G   &kp J      &kp L            &kp U         &kp Y           &kp SEMI           &kp BSLH
 &mo NAV       &kp A      &kp R   &kp S     &kp T     &kp D   &kp H      &kp N            &kp E         &kp I           &kp O              &kp SQT
 &kp LSHIFT  &kp Z      &kp X   &kp C     &kp V     &kp B   &kp K      &kp M            &kp COMMA     &kp DOT         &kp FSLH           &mt RSHFT RET
-&kp C_MUTE  &tog SCRLH  &mo ADJUST   &kp LALT  &kp LGUI  &mo SYM   &kp SPACE  &kp LCTRL        &kp K_APP     &mo ADJUST        &kp DELETE
+&kp C_MUTE  &tog SCRLH  &mo ADJUST   &kp LALT  &kp LGUI  &mo SYM   &kp SPACE  &kp LCTRL        &caps_word     &mo ADJUST        &kp DELETE
                                                            &kp ENTER      &kp RIGHT_ARROW  &kp UP_ARROW  &kp LEFT_ARROW  &kp DOWN_ARROW
 &mkp MB4 &ltm ADJUST MB5 &mto SCRLM SNIPE &lhm SCRLM RCLK &mkp LCLK &mkp MCLK
             >;
@@ -112,7 +115,7 @@
             bindings = <
 &kp N1      &kp N2     &kp N3  &kp N4    &kp N5    &kp N6  &kp N7     &kp N8           &kp N9        &kp N0          &kp LC(BACKSPACE)  &kp BACKSPACE
 &kp TAB     &kp Q      &kp W   &kp F     &kp P     &kp G   &kp J      &kp L            &kp U         &kp Y           &kp SEMI           &kp BSLH
-&mo NAV       &kp A      &kp R   &kp S     &kp T     &kp D   &kp H      &kp N            &kp E         &kp I           &kp O              &kp SQT
+&mo NAV     &kp A      &kp R   &kp S     &kp T     &kp D   &kp H      &kp N            &kp E         &kp I           &kp O              &kp SQT
 &kp LSHIFT  &kp Z      &kp X   &kp C     &kp V     &kp B   &kp K      &kp M            &kp COMMA     &kp DOT         &kp FSLH           &mt RSHFT RET
 &kp C_MUTE  &to DEFAULT  &mo ADJUST   &kp LALT  &kp LGUI  &mo SYM   &kp SPACE  &kp LCTRL        &kp K_APP     &kp RALT        &kp DELETE
                                                            &kp ENTER      &kp RIGHT_ARROW  &kp UP_ARROW  &kp LEFT_ARROW  &kp DOWN_ARROW
@@ -134,10 +137,10 @@
 
             bindings = <
 &kp N1      &kp N2     &kp N3  &kp N4    &kp N5    &kp N6  &kp N7     &kp N8           &kp N9        &kp N0          &kp LC(BACKSPACE)  &kp BACKSPACE
-&kp TAB     &kp Q      &kp W   &kp F     &kp P     &kp G   &kp J      &kp L            &kp U         &kp Y           &kp SEMI           &kp BSLH
-&mo NAV       &kp A      &kp R   &kp S     &kp T     &kp D   &kp H      &kp N            &kp E         &kp I           &kp O              &kp SQT
-&kp LSHIFT  &kp Z      &kp X   &kp C     &kp V     &kp B   &kp K      &kp M            &kp COMMA     &kp DOT         &kp FSLH           &mt RSHFT RET
-&kp C_MUTE  &kp LCTRL  &mo ADJUST   &kp LALT  &kp LGUI  &mo SYM   &kp SPACE  &kp LCTRL        &kp K_APP     &kp RALT        &kp DELETE
+&kp TAB     &kp Q      &kp KP_N7   &kp KP_N8     &kp KP_N9     &kp G   &kp J      &kp L            &kp U         &kp Y           &kp SEMI           &kp BSLH
+&mo NAV     &kp A      &kp KP_N4   &kp KP_N5     &kp KP_N6     &kp D   &kp H      &kp N            &kp E         &kp I           &kp O              &kp SQT
+&kp DEL  &kp Z      &kp KP_N1   &kp KP_N2     &kp KP_N3     &kp B   &kp K      &kp M            &kp COMMA     &kp DOT         &kp FSLH           &mt RSHFT RET
+&kp C_MUTE  &kp LCTRL  &kp KP_N0   &kp KP_DOT    &kp LGUI  &kp KP_ENTER   &kp SPACE  &kp LCTRL        &kp K_APP     &kp RALT        &kp DELETE
                                                            &kp ENTER      &kp RIGHT_ARROW  &kp UP_ARROW  &kp LEFT_ARROW  &kp DOWN_ARROW
         &trans &trans &to DEFAULT &lhm SCRLM RCLK
         &mkp LCLK                 &lhm SCRLM MCLK
@@ -164,7 +167,7 @@
 &studio_unlock  &kp PRCNT  &kp AMPS  &kp QMARK  &kp PLUS   &kp AT    &kp DLLR       &kp UNDER  &kp LBKT     &kp RBKT  &kp EXCL       &trans
 &trans  &kp FSLH   &kp LPAR  &kp EQUAL  &kp N0     &kp LBRC  &kp RBRC       &kp N1     &kp STAR     &kp RPAR  &kp MINUS      &kp SQT
 &trans  &kp N6     &kp N7    &kp N8     &kp N9     &kp PIPE  &kp BACKSLASH  &kp N2     &kp N3       &kp N4    &kp N5         &trans
-&trans  &trans     &trans    &trans     &trans     &trans    &kp RET        &trans     &trans       &trans    &trans
+&trans  &trans     &trans    &trans     &trans     &kp LS(&mkp MCLK)    &kp RET        &trans     &trans       &trans    &trans
                                                              &kp A          &kp END    &kp PAGE_UP  &kp HOME  &kp PAGE_DOWN
 &mkp MB4 &mkp MB5 &mto SCRLM SNIPE &lhm SCRLM RCLK &mkp LCLK &mkp MCLK
             >;
@@ -186,7 +189,7 @@
 &kp F1  &kp F2     &kp F3     &kp F4         &kp F5         &kp F6   &kp F7     &kp F8              &kp F9     &kp F10              &kp F11    &kp F12
 &trans  &kp INS    &kp PSCRN  &kp LC(PG_UP)  &kp LC(PG_DN)  &trans   &kp PG_UP  &kp LC(LEFT_ARROW)  &kp UP     &kp LC(RIGHT_ARROW)  &trans     &trans
 &trans  &kp LALT   &kp GUI    &kp LSHFT      &kp LCTRL      &kp ESC  &kp PG_DN  &kp LEFT            &kp DOWN   &kp RIGHT            &kp BSPC   &kp DEL
-&trans  &kp LC(Z)  &kp LC(X)  &kp LC(C)      &kp LC(V)      &trans   &trans     &trans              &trans     &trans               &trans     &trans
+&trans  &kp LC(Z)  &kp LC(X)  &kp LC(C)      &kp LC(V)      &trans   &trans     &kp HOME              &trans     &kp END               &trans     &trans
 &trans  &trans     &trans     &trans         &trans         &trans   &kp RET    &trans              &trans     &trans               &trans
                                                                      &kp A      &kp END             &kp PG_UP  &kp HOME             &kp PG_DN
 &mkp MB4 &mkp MB5 &mto SCRLM SNIPE &lhm SCRLM RCLK &mkp LCLK &mkp MCLK
