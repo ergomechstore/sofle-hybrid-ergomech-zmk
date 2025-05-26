@@ -180,7 +180,7 @@ mm: mm {
 &studio_unlock  &kp PRCNT  &kp AMPS  &kp QMARK  &kp PLUS   &kp AT    &kp DLLR       &kp UNDER  &kp LBKT     &kp RBKT  &kp EXCL       &trans
 &trans  &kp FSLH   &kp LPAR  &kp EQUAL  &kp N0     &kp LBRC  &kp RBRC       &kp N1     &kp STAR     &kp RPAR  &kp MINUS      &kp SQT
 &trans  &kp N6     &kp N7    &kp N8     &kp N9     &kp PIPE  &kp BACKSLASH  &kp N2     &kp N3       &kp N4    &kp N5         &trans
-&trans  &trans     &trans    &trans     &trans     &mm LSHFT MCLK    &kp RET        &trans     &trans       &trans    &trans
+&trans  &trans     &trans    &trans     &mm LSHFT MCLK &trans    &kp RET        &trans     &trans       &trans    &trans
                                                              &kp A          &kp END    &kp PAGE_UP  &kp HOME  &kp PAGE_DOWN
 &mkp MB4 &mkp MB5 &mto SCRLM SNIPE &lhm SCRLM RCLK &mkp LCLK &mkp MCLK
             >;
