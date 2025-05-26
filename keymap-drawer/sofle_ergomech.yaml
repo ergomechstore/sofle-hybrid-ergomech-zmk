@@ -57,7 +57,7 @@ layers:
   - symbol
   - SPACE
   - LCTRL
-  - APP
+  - '&caps_word'
   - adjust
   - DELETE
   - ENTER
@@ -228,9 +228,9 @@ layers:
   - BACKSPACE
   - TAB
   - Q
-  - W
-  - F
-  - P
+  - KP 7
+  - KP 8
+  - KP 9
   - G
   - J
   - L
@@ -240,9 +240,9 @@ layers:
   - \
   - navigation
   - A
-  - R
-  - S
-  - T
+  - KP 4
+  - KP 5
+  - KP 6
   - D
   - H
   - N
@@ -250,11 +250,11 @@ layers:
   - I
   - O
   - ''''
-  - LSHIFT
+  - DEL
   - Z
-  - X
-  - C
-  - V
+  - KP 1
+  - KP 2
+  - KP 3
   - B
   - K
   - M
@@ -264,10 +264,10 @@ layers:
   - {t: RET, h: RSHFT}
   - MUTE
   - LCTRL
-  - adjust
-  - LALT
+  - KP 0
+  - KP DOT
   - LGUI
-  - symbol
+  - KP ENTER
   - SPACE
   - LCTRL
   - APP
@@ -399,9 +399,9 @@ layers:
   - Ctl+V
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - HOME
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - END
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
