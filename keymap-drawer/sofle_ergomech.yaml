@@ -338,7 +338,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {type: held}
+  - {t: '&mm LSHFT MCLK', type: held}
   - RET
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
