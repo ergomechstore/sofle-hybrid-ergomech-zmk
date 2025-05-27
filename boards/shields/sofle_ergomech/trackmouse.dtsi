@@ -27,7 +27,7 @@
         input-processors = <&zip_xy_swap_mapper>;
         scroll {
         layers = <SCRLM SCRLH>;
-        input-processors =  <&zip_xy_swap_mapper>, <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>, <&zip_xy_scaler 1 40>, <&zip_xy_to_scroll_mapper>;
+        input-processors =  <&zip_xy_swap_mapper>, <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>, <&zip_x_scaler 1 40>, <&zip_y_scaler 1 100>, <&zip_xy_to_scroll_mapper>;
     };
         snipe {
         layers = <SNIPE>;
