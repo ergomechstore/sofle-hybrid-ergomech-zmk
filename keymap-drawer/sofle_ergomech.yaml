@@ -336,7 +336,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - '&mk MCLK'
+  - '&mkp MCLK'
   - '&mm LSHFT MCLK'
   - {type: held}
   - RET
