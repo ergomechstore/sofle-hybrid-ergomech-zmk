@@ -24,6 +24,11 @@
     // Activate ADJUST layer by pressing raise and lower
 
   behaviors {
+      scroll_encoder: scroll_encoder {
+      compatible = "zmk,behavior-sensor-rotate";
+      #sensor-binding-cells = <0>;
+      bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
+        };
     ltm: layer-tap-or-mouse {
       compatible = "zmk,behavior-hold-tap";
       #binding-cells = <2>;
@@ -185,7 +190,7 @@ mm: mm {
 &mkp MB4 &mkp MB5 &mto SCRLM SNIPE &lhm SCRLM RCLK &mkp LCLK &mkp MCLK
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+            sensor-bindings = <&scroll_encoder>;
         };
 
         nav_layer {
