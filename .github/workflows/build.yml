@@ -34,4 +34,4 @@ jobs:
           tag_name: ${{ steps.date.outputs.date }}-${{ github.sha }}
           name: Firmware ${{ steps.date.outputs.date }}
           body: Build from commit ${{ github.sha }}
-          files: '*.zip'
+          files: '*.uf2'
