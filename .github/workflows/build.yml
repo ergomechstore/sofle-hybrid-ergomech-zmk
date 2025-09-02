@@ -2,7 +2,9 @@ name: Build ZMK Firmware
 
 on:
   push:
-    branches: [ main ]
+    branches:
+      - master
+      - sofle_hybrid_rgb_rev5
   workflow_dispatch:
 
 permissions:
