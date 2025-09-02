@@ -1,3 +1,8 @@
+# Sofle Hybrid Keyboard Firmware
+
+[![Build Status](../../actions/workflows/build.yml/badge.svg)](../../actions)
+[![Download Firmware](https://img.shields.io/badge/Download-Firmware-blue?logo=github)](../../releases/latest)
+
 # Rev 5 annoucement:
 We have created several version of pcb for this keyboard since it first started, but most of them are incremental changes and nothing breaks, but since May of 2025, we ship all of our Sofle hybrid keyboards with the rev5, this mark the end of the EVQ roller encoder and introducing the Roller encoder of our own. Due to this breaking changes, we update the repo and now the branch name `Default` are for the old pcb and the `sofle_hybrid_rgb_rev5` is for the rev5 pcb.
 # The Sofle hybrid is now fully supported by ZMK Studio
