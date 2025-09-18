@@ -48,7 +48,7 @@
                                                                       &tog RAISE     &mkp MB2  &kp LGUI &mkp MB3  &mkp MB1
             >;
 
-            sensor-bindings = <&inc_dec_kp MB4 MB5>;
+            sensor-bindings = <&inc_dec_kp SCRL_DOWN SCRL_UP>;
         };
 
         lower_layer {
