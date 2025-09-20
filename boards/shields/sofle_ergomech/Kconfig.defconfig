@@ -1,52 +1,46 @@
-# Copyright (c) 2020 Ryan Cross
-# SPDX-License-Identifier: MIT
-
+# Existing configurations for left and right shields
 if SHIELD_SOFLE_ERGOMECH_LEFT
-
 config ZMK_KEYBOARD_NAME
-    default "Ergomech Sofle"
+    default "Sofle Ergomech"
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
 
+config ZMK_SPLIT
+    default y
 endif
 
-if SHIELD_SOFLE_ERGOMECH_LEFT || SHIELD_SOFLE_ERGOMECH_RIGHT
+if SHIELD_SOFLE_ERGOMECH_RIGHT
+config ZMK_KEYBOARD_NAME
+    default "Sofle Ergomech"
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default n
+
+config ZMK_SPLIT
+    default y
+endif
+
+# New dongle configuration
+if SHIELD_SOFLE_ERGOMECH_DONGLE
+config ZMK_KEYBOARD_NAME
+    default "Sofle Ergomech"
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
 
 config ZMK_SPLIT
     default y
 
-if ZMK_DISPLAY
+# Set this to the number of peripherals your dongle will have (left + right = 2)
+config ZMK_SPLIT_BLE_CENTRAL_PERIPHERALS
+    default 2
 
-config I2C
-    default y
+# Set this to ZMK_SPLIT_BLE_CENTRAL_PERIPHERALS + your desired number of BT profiles (default is 5)
+config BT_MAX_CONN
+    default 7
 
-config SSD1306
-    default y
-
-endif # ZMK_DISPLAY
-
-if LVGL
-
-config LV_Z_VDB_SIZE
-    default 64
-
-config LV_DPI_DEF
-    default 148
-
-config LV_Z_BITS_PER_PIXEL
-    default 1
-
-choice LV_COLOR_DEPTH
-    default LV_COLOR_DEPTH_1
-endchoice
-
-endif # LVGL
-
-if ZMK_RGB_UNDERGLOW
-
-config WS2812_STRIP
-    default y
-endif
-
+# Set this to the same number as BT_MAX_CONN
+config BT_MAX_PAIRED
+    default 7
 endif

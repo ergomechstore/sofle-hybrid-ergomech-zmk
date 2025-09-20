@@ -1,8 +1,10 @@
-# Copyright (c) 2020 Ryan Cross
-# SPDX-License-Identifier: MIT
-
+# Existing shield configurations
 config SHIELD_SOFLE_ERGOMECH_LEFT
     def_bool $(shields_list_contains,sofle_ergomech_left)
 
 config SHIELD_SOFLE_ERGOMECH_RIGHT
     def_bool $(shields_list_contains,sofle_ergomech_right)
+
+# New dongle shield configuration
+config SHIELD_SOFLE_ERGOMECH_DONGLE
+    def_bool $(shields_list_contains,sofle_ergomech_dongle)
