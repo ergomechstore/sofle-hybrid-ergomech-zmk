@@ -2,14 +2,11 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    # support nice_oled and nice_epaper
-
+    
   projects:
     - name: zmk
       remote: zmkfirmware
       revision: main
       import: app/west.yml
-    # support nice_oled and nice_epaper
-    - 
   self:
     path: config
