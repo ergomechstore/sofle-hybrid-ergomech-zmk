@@ -1,5 +1,59 @@
-on: [push, pull_request, workflow_dispatch]
+name: Build ZMK Firmware
+
+on:
+  push:
+    branches:
+      - master
+      - sofle_hybrid_rgb_rev5
+  workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   build:
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+
+  create_release_master:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download firmware artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: firmware
+
+      - name: Get current date
+        id: date
+        run: echo "date=$(date +'%Y-%m-%d')" >> $GITHUB_OUTPUT
+
+      - name: Create Release with firmware
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: ${{ steps.date.outputs.date }}-${{ github.sha }}
+          name: Firmware ${{ steps.date.outputs.date }} - master
+          body: Build from commit ${{ github.sha }}
+          files: '*.uf2'
+
+  create_release_rev5:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/sofle_hybrid_rgb_rev5'
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download firmware artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: firmware
+
+      - name: Get current date
+        id: date
+        run: echo "date=$(date +'%Y-%m-%d')" >> $GITHUB_OUTPUT
+
+      - name: Create Release with firmware
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: ${{ steps.date.outputs.date }}-${{ github.sha }}
+          name: Firmware ${{ steps.date.outputs.date }} - rev5
+          body: Build from commit ${{ github.sha }}
+          files: '*.uf2'
