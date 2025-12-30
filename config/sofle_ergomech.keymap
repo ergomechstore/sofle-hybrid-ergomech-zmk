@@ -48,14 +48,14 @@
             // |  ESC  |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   | BKSPC |
             // |  TAB  |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   |   '   |
             // | SHIFT |  Z  |  X  |  C   |  V   |  B   |  MUTE  |  |       |  N   |  M    |  ,    |  .   |   /   | SHIFT |
-            //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
+            //               | CTRL| ALT  | GUI  | LOWER|  ENTER |  | SPACE | RAISE| GUI   | ALT   | CTRL |
 
             bindings = <
 &kp GRAVE   &kp N1    &kp N2    &kp N3     &kp N4     &kp N5   &kp N6     &kp N7     &kp N8        &kp N9    &kp N0    &none
 &kp ESC     &kp Q     &kp W     &kp E      &kp R      &kp T    &kp Y      &kp U      &kp I         &kp O     &kp P     &kp BSPC
 &kp TAB     &kp A     &kp S     &kp D      &kp F      &kp G    &kp H      &kp J      &kp K         &kp L     &kp SEMI  &kp SQT
 &kp LSHFT   &kp Z     &kp X     &kp C      &kp V      &kp B    &kp N      &kp M      &kp COMMA     &kp DOT   &kp FSLH  &kp RSHFT
-&kp C_MUTE  &kp LGUI  &kp LALT  &kp LCTRL  &mo LOWER  &kp RET  &kp SPACE  &mo RAISE  &kp RCTRL     &kp RALT  &kp RGUI
+&kp C_MUTE  &kp LCTRL &kp LALT  &kp LGUI   &mo LOWER  &kp RET  &kp SPACE  &mo RAISE  &kp RGUI      &kp RALT  &kp RCTRL
                                                                &kp ENTER  &mmv MOVE_RIGHT  &mmv MOVE_UP  &mmv MOVE_LEFT  &mmv MOVE_DOWN
             >;
 
