@@ -56,7 +56,7 @@
 &kp TAB     &kp A     &kp S     &kp D      &kp F      &kp G    &kp H      &kp J      &kp K         &kp L     &kp SEMI  &kp SQT
 &kp LSHFT   &kp Z     &kp X     &kp C      &kp V      &kp B    &kp N      &kp M      &kp COMMA     &kp DOT   &kp FSLH  &kp RSHFT
 &kp C_MUTE  &kp LCTRL &kp LALT  &kp LGUI   &mo LOWER  &kp RET  &kp SPACE  &mo RAISE  &kp RGUI      &kp RALT  &kp RCTRL
-                                                               &kp ENTER  &mmv MOVE_RIGHT  &mmv MOVE_UP  &mmv MOVE_LEFT  &mmv MOVE_DOWN
+                                                               &kp ENTER  &kp RIGHT  &kp UP        &kp LEFT  &kp DOWN
             >;
 
             sensor-bindings = <&mousescroll &inc_dec_kp PG_UP PG_DN>;
