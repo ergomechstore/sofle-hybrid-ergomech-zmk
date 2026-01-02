@@ -77,26 +77,30 @@ After extracting, you should see these 3 files:
 
 Before flashing, you need to know how to enter bootloader mode.
 
-### Where is the RST Button?
+### Where are the RST and GND Pins?
 
-The RST (Reset) button is a **small tactile button** on the Nice!Nano microcontroller:
+The RST (Reset) and GND (Ground) pins are on the Nice!Nano microcontroller:
 
 1. Look at your keyboard - find the Nice!Nano board (the small controller with USB-C and OLED)
-2. On the Nice!Nano board, find a **tiny button** (usually near the USB-C port)
-3. It's labeled **"RST"** or **"RESET"**
-4. **Size:** About 3-4mm, black or white plastic
-5. **Tool needed:** Your fingernail, or a pen tip (it's very small)
+2. On the Nice!Nano board, locate the pin headers (the rows of metal pins along the edges)
+3. **RST pin:** Labeled "RST" or "RESET" (usually on the edge of the board)
+4. **GND pin:** Labeled "GND" (Ground) - there are multiple GND pins, use any one
 
-### How to Double-Press (Enter Bootloader Mode)
+### How to Enter Bootloader Mode (Connect GND and RST)
+
+**⚠️ IMPORTANT: This method is for keyboards WITHOUT a physical reset button.**
 
 **The Technique:**
+1. **Connect USB cable** to the keyboard first (keyboard must be powered)
+2. **Locate RST and GND pins** on the Nice!Nano board
+3. **Use a conductive tool** (tweezers, wire, paperclip, or screwdriver)
+4. **Touch both RST and GND pins simultaneously** for a brief moment (~0.5 seconds)
+5. **Remove the tool** - don't hold too long
+
+**Alternative Method (if RST button exists):**
 - Press and release the RST button **twice quickly**
 - Like double-clicking a mouse: "click-click"
 - **Timing:** Both presses within ~0.5 seconds
-- NOT too slow (1 second pause = just a reset)
-- NOT holding it down (that's a single press)
-
-**Practice rhythm:** tap-tap (quick succession)
 
 ### How to Know It Worked:
 
