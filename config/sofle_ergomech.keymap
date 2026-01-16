@@ -15,7 +15,7 @@
 #define LOWER 1
 #define RAISE 2
 #define ADJUST 3
-
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 900
 / {
     // Activate ADJUST layer by pressing raise and lower
 
