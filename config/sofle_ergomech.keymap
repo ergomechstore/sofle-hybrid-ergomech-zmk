@@ -35,6 +35,16 @@
             bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
 			tap-ms = <20>;
         };
+
+        // Hold-tap behavior: tap for lowercase, hold for uppercase (Shift + key)
+        // Usage: &hc LS(X) X - hold outputs Shift+X (uppercase), tap outputs X (lowercase)
+        hc: hold_character {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&kp>, <&kp>;
+        };
     };
 
     keymap {
@@ -51,12 +61,12 @@
             //               | CTRL| ALT  | GUI  | LOWER|  ENTER |  | SPACE | RAISE| GUI   | ALT   | CTRL |
 
             bindings = <
-&kp ESC     &kp N1    &kp N2    &kp N3     &kp N4     &kp N5   &kp N6     &kp N7     &kp N8        &kp N9    &kp N0    &none
-&kp GRAVE   &kp Q     &kp W     &kp E      &kp R      &kp T    &kp Y      &kp U      &kp I         &kp O     &kp P     &kp BSPC
-&kp TAB     &kp A     &kp S     &kp D      &kp F      &kp G    &kp H      &kp J      &kp K         &kp L     &kp SEMI  &kp SQT
-&kp LSHFT   &kp Z     &kp X     &kp C      &kp V      &kp B    &kp N      &kp M      &kp COMMA     &kp DOT   &kp FSLH  &kp RSHFT
-&kp C_MUTE  &kp LCTRL &kp LALT  &kp LGUI   &mo LOWER  &kp RET  &kp SPACE  &mo RAISE  &kp RGUI      &kp RALT  &kp RCTRL
-                                                               &kp ENTER  &kp RIGHT  &kp UP        &kp LEFT  &kp DOWN
+&kp ESC     &kp N1        &kp N2        &kp N3        &kp N4        &kp N5       &kp N6       &kp N7        &kp N8        &kp N9        &kp N0    &none
+&kp GRAVE   &hc LS(Q) Q   &hc LS(W) W   &hc LS(E) E   &hc LS(R) R   &hc LS(T) T  &hc LS(Y) Y  &hc LS(U) U   &hc LS(I) I   &hc LS(O) O   &hc LS(P) P   &kp BSPC
+&kp TAB     &hc LS(A) A   &hc LS(S) S   &hc LS(D) D   &hc LS(F) F   &hc LS(G) G  &hc LS(H) H  &hc LS(J) J   &hc LS(K) K   &hc LS(L) L   &kp SEMI  &kp SQT
+&kp LSHFT   &hc LS(Z) Z   &hc LS(X) X   &hc LS(C) C   &hc LS(V) V   &hc LS(B) B  &hc LS(N) N  &hc LS(M) M   &kp COMMA     &kp DOT       &kp FSLH  &kp RSHFT
+&kp C_MUTE  &kp LCTRL     &kp LALT      &kp LGUI      &mo LOWER     &kp RET      &kp SPACE    &mo RAISE     &kp RGUI      &kp RALT      &kp RCTRL
+                                                                                 &kp ENTER    &kp RIGHT     &kp UP        &kp LEFT      &kp DOWN
             >;
 
             sensor-bindings = <&mousescroll &inc_dec_kp PG_UP PG_DN>;
