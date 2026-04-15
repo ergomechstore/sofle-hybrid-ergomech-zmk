@@ -1,1 +1,7 @@
 .idea
+.west/
+zmk/
+modules/
+zephyr-sdk/
+build/
+*.uf2
