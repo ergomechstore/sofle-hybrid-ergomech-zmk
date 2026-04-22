@@ -14,7 +14,6 @@
 #define BASE 0
 #define NAV 1
 #define SYM 2
-#define GAME 3
 
 / {
     behaviors {
@@ -32,15 +31,19 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
-    };
 
-    combos {
-        compatible = "zmk,combos";
+        td_boot_l: tap_dance_boot_left {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp LGUI>, <&kp LGUI>, <&bootloader>;
+        };
 
-        combo_game {
-            timeout-ms = <50>;
-            key-positions = <9 10 11>;
-            bindings = <&tog GAME>;
+        td_boot_r: tap_dance_boot_right {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp BSPC>, <&kp BSPC>, <&bootloader>;
         };
     };
 
@@ -55,16 +58,17 @@
             // |  TAB  |  Q  |  W  |  E   |  R   |  T   |                    |  Y   |  U    |  I    |  O   |   P   |   [   |
             // | LCTRL |  A  |  S  |  D   |  F   |  G   |                    |  H   |  J    |  K    |  L   |   ;   |   '   |
             // | SHIFT |  Z  |  X  |  C   |  V   |  B   |                    |  N   |  M    |  ,    |  .   |   /   |   \   |
-            //         |     |     | LALT | LGUI | NAV/SPC |  | SYM/ENT | BSPC | RGUI |     |     |
+            //         |     |     | LALT | LGUI*| NAV/SPC |  | SYM/ENT | BSPC*| RGUI |     |     |
             //                                              |  ENTER  | RIGHT |  UP   | LEFT | DOWN  |
+            // * = triple-tap = bootloader (on that half)
 
             bindings = <
-&kp ESC    &kp N1  &kp N2  &kp N3    &kp N4    &kp N5                                &kp N6         &kp N7    &kp N8     &kp N9    &kp N0    &kp MINUS
-&kp TAB    &kp Q   &kp W   &kp E     &kp R     &kp T                                 &kp Y          &kp U     &kp I      &kp O     &kp P     &kp LBKT
-&kp LCTRL  &kp A   &kp S   &kp D     &kp F     &kp G                                 &kp H          &kp J     &kp K      &kp L     &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z   &kp X   &kp C     &kp V     &kp B                                 &kp N          &kp M     &kp COMMA  &kp DOT   &kp FSLH  &kp BSLH
-&kp C_MUTE &studio_unlock  &none     &kp LALT  &kp LGUI  &lt NAV SPACE  &lt SYM ENTER &kp BSPC       &kp RGUI  &none      &none
-                                                                         &kp ENTER     &kp RIGHT      &kp UP    &kp LEFT   &kp DOWN
+&kp ESC    &kp N1  &kp N2  &kp N3    &kp N4      &kp N5                                &kp N6         &kp N7    &kp N8     &kp N9    &kp N0    &kp MINUS
+&kp TAB    &kp Q   &kp W   &kp E     &kp R       &kp T                                 &kp Y          &kp U     &kp I      &kp O     &kp P     &kp LBKT
+&kp LCTRL  &kp A   &kp S   &kp D     &kp F       &kp G                                 &kp H          &kp J     &kp K      &kp L     &kp SEMI  &kp SQT
+&kp LSHFT  &kp Z   &kp X   &kp C     &kp V       &kp B                                 &kp N          &kp M     &kp COMMA  &kp DOT   &kp FSLH  &kp BSLH
+&kp C_MUTE &studio_unlock  &none     &kp LALT    &td_boot_l  &lt NAV SPACE  &lt SYM ENTER &td_boot_r   &kp RGUI  &none      &none
+                                                                             &kp ENTER     &kp RIGHT      &kp UP    &kp LEFT   &kp DOWN
             >;
 
             sensor-bindings = <&mousescroll &inc_dec_kp PG_UP PG_DN>;
@@ -109,28 +113,6 @@
 &kp LSHFT      &kp LS(LA(N1))  &kp LS(LA(N2))  &kp LS(LA(N3))  &kp LS(LA(N4))  &kp LS(LA(N5))                         &kp LS(LA(N6))  &kp LS(LA(N7))  &kp LS(LA(N8))  &kp LS(LA(N9))  &kp LS(LA(N0))  &kp LS(NON_US_HASH)
 &trans         &none           &none           &kp LALT        &kp LGUI        &kp SPACE           &kp ENTER          &kp BSPC        &kp RGUI        &none           &none
                                                                                                     &trans             &trans          &trans          &trans          &trans
-            >;
-
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
-        };
-
-        game_layer {
-            label = "GAME";
-
-            // ---------------------------------------------------------------------------------------------------------------
-            // |  ESC  |     |     |      |      |      |                    |       |       |       |   9   |   0   | MINUS |
-            // |       |     |     |  W   |      |      |                    |       |       |       |       |       |       |
-            // |       | SHFT|  A  |  S   |  D   |      |                    |       |   J   |   K   |       |       |       |
-            // |       |     |     |      |      |      |                    |       |       |       |       |       |       |
-            //         |     |     |      | RCLK | SPACE |     |   V   |      |      |     |     |
-
-            bindings = <
-&kp ESC  &none      &none   &none   &none      &none                       &none    &none   &none   &kp N9  &kp N0  &kp MINUS
-&none    &none      &none   &kp W   &none      &none                       &none    &none   &none   &none   &none   &none
-&none    &kp LSHFT  &kp A   &kp S   &kp D      &none                       &none    &kp J   &kp K   &none   &none   &none
-&none    &none      &none   &none   &none      &none                       &none    &none   &none   &none   &none   &none
-&trans   &none      &none   &none   &mkp RCLK  &kp SPACE    &kp V          &none    &none   &none   &none
-                                                             &trans         &trans   &trans  &trans  &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
